@@ -1,7 +1,7 @@
 import axios from 'axios';
-import { User } from '../types';
+import type { User } from '../types';
 
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api/v1';
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://mcan-national-website.onrender.com/api/v1';
 
 const adminService = {
   // Get all users

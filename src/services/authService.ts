@@ -1,7 +1,7 @@
 import axios from 'axios';
-import { User, LoginData, RegisterData, ApiResponse } from '../types';
+import type { User, LoginData, RegisterData, ApiResponse } from '../types';
 
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'https://mcan-national-website.onrender.com/api/v1';
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://mcan-national-website.onrender.com/api/v1';
 
 // Create axios instance with default config
 const api = axios.create({
@@ -13,22 +13,22 @@ const api = axios.create({
 
 // Request interceptor to add auth token
 api.interceptors.request.use(
-  (config) => {
+  (config: any) => {
     const token = localStorage.getItem('mcan_token');
     if (token) {
       config.headers.Authorization = `Bearer ${token}`;
     }
     return config;
   },
-  (error) => {
+  (error: any) => {
     return Promise.reject(error);
   }
 );
 
 // Response interceptor to handle auth errors
 api.interceptors.response.use(
-  (response) => response,
-  (error) => {
+  (response: any) => response,
+  (error: any) => {
     if (error.response?.status === 401) {
       localStorage.removeItem('mcan_token');
       window.location.href = '/login';
