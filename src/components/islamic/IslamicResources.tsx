@@ -51,7 +51,7 @@ interface IslamicResource {
 }
 
 const IslamicResources: React.FC = () => {
-  const [_activeTab] = useState(0);
+  // Removed unused tab state
   const [selectedResource, setSelectedResource] = useState<IslamicResource | null>(null);
   const [dialogOpen, setDialogOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
