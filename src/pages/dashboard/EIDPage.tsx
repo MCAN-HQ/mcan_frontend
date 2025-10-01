@@ -15,10 +15,10 @@ const EIDPage: React.FC = () => {
       </Box>
 
       <Grid container spacing={3}>
-        <Grid item xs={12}>
+        <Grid xs={12}>
           <EIDCard />
         </Grid>
-        <Grid item xs={12}>
+        <Grid xs={12}>
           <Card sx={{ p: 2 }}>
             <Typography variant="subtitle1" sx={{ fontWeight: 'bold', mb: 1 }}>
               Notes

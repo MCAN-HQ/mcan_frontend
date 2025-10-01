@@ -303,7 +303,7 @@ const AdminDashboard: React.FC = () => {
             { role: 'MCLO_AMEER', description: 'Local chapter leadership', color: 'warning' },
             { role: 'MEMBER', description: 'Standard corps member access', color: 'default' },
           ].map((roleInfo) => (
-            <Grid item xs={12} md={6} key={roleInfo.role}>
+            <Grid xs={12} md={6} key={roleInfo.role}>
               <Card>
                 <CardContent>
                   <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
@@ -327,7 +327,7 @@ const AdminDashboard: React.FC = () => {
           System Overview
         </Typography>
         <Grid container spacing={3}>
-          <Grid item xs={12} sm={6} md={3}>
+          <Grid xs={12} sm={6} md={3}>
             <Card>
               <CardContent>
                 <Typography variant="h4" color="primary" sx={{ fontWeight: 'bold' }}>
@@ -339,7 +339,7 @@ const AdminDashboard: React.FC = () => {
               </CardContent>
             </Card>
           </Grid>
-          <Grid item xs={12} sm={6} md={3}>
+          <Grid xs={12} sm={6} md={3}>
             <Card>
               <CardContent>
                 <Typography variant="h4" color="success.main" sx={{ fontWeight: 'bold' }}>
@@ -351,7 +351,7 @@ const AdminDashboard: React.FC = () => {
               </CardContent>
             </Card>
           </Grid>
-          <Grid item xs={12} sm={6} md={3}>
+          <Grid xs={12} sm={6} md={3}>
             <Card>
               <CardContent>
                 <Typography variant="h4" color="info.main" sx={{ fontWeight: 'bold' }}>
@@ -363,7 +363,7 @@ const AdminDashboard: React.FC = () => {
               </CardContent>
             </Card>
           </Grid>
-          <Grid item xs={12} sm={6} md={3}>
+          <Grid xs={12} sm={6} md={3}>
             <Card>
               <CardContent>
                 <Typography variant="h4" color="warning.main" sx={{ fontWeight: 'bold' }}>
@@ -383,7 +383,7 @@ const AdminDashboard: React.FC = () => {
         <DialogTitle>Create New User</DialogTitle>
         <DialogContent>
           <Grid container spacing={2} sx={{ mt: 1 }}>
-            <Grid item xs={12} sm={6}>
+            <Grid xs={12} sm={6}>
               <TextField
                 fullWidth
                 label="Full Name"
@@ -392,7 +392,7 @@ const AdminDashboard: React.FC = () => {
                 required
               />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid xs={12} sm={6}>
               <TextField
                 fullWidth
                 label="Email"
@@ -402,7 +402,7 @@ const AdminDashboard: React.FC = () => {
                 required
               />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid xs={12} sm={6}>
               <TextField
                 fullWidth
                 label="Phone"
@@ -411,7 +411,7 @@ const AdminDashboard: React.FC = () => {
                 required
               />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid xs={12} sm={6}>
               <FormControl fullWidth required>
                 <InputLabel>Role</InputLabel>
                 <Select
@@ -426,7 +426,7 @@ const AdminDashboard: React.FC = () => {
                 </Select>
               </FormControl>
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid xs={12} sm={6}>
               <TextField
                 fullWidth
                 label="State Code"
@@ -434,7 +434,7 @@ const AdminDashboard: React.FC = () => {
                 onChange={(e) => setFormData({ ...formData, stateCode: e.target.value })}
               />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid xs={12} sm={6}>
               <TextField
                 fullWidth
                 label="Deployment State"
@@ -442,7 +442,7 @@ const AdminDashboard: React.FC = () => {
                 onChange={(e) => setFormData({ ...formData, deploymentState: e.target.value })}
               />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid xs={12} sm={6}>
               <TextField
                 fullWidth
                 label="Service Year"
@@ -465,7 +465,7 @@ const AdminDashboard: React.FC = () => {
         <DialogTitle>Edit User</DialogTitle>
         <DialogContent>
           <Grid container spacing={2} sx={{ mt: 1 }}>
-            <Grid item xs={12} sm={6}>
+            <Grid xs={12} sm={6}>
               <TextField
                 fullWidth
                 label="Full Name"
@@ -474,7 +474,7 @@ const AdminDashboard: React.FC = () => {
                 required
               />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid xs={12} sm={6}>
               <TextField
                 fullWidth
                 label="Email"
@@ -484,7 +484,7 @@ const AdminDashboard: React.FC = () => {
                 required
               />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid xs={12} sm={6}>
               <TextField
                 fullWidth
                 label="Phone"
@@ -493,7 +493,7 @@ const AdminDashboard: React.FC = () => {
                 required
               />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid xs={12} sm={6}>
               <FormControl fullWidth required>
                 <InputLabel>Role</InputLabel>
                 <Select

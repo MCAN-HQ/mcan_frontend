@@ -30,7 +30,7 @@ const AboutPage: React.FC = () => {
       <Box className="islamic-pattern" sx={{ bgcolor: 'var(--mcan-background)', pt: { xs: 8, md: 12 }, pb: { xs: 6, md: 10 } }}>
         <Container maxWidth="lg">
           <Grid container spacing={4} alignItems="center">
-            <Grid item xs={12} md={6}>
+            <Grid xs={12} md={6}>
               <Chip label="About MCAN" color="primary" sx={{ fontWeight: 700, mb: 2 }} />
               <Typography variant="h2" sx={{ fontWeight: 900, lineHeight: 1.1, color: 'primary.dark', mb: 2 }}>
                 Muslim Corpers' Association of Nigeria
@@ -47,7 +47,7 @@ const AboutPage: React.FC = () => {
                 </Button>
               </Stack>
             </Grid>
-            <Grid item xs={12} md={6}>
+            <Grid xs={12} md={6}>
               <Box sx={{ display: 'flex', justifyContent: 'center' }}>
                 <Box className="islamic-border" sx={{ p: 1, borderRadius: 2 }}>
                   <Box component="img" src={mcanLogo} alt="MCAN Logo" sx={{ width: '100%', maxWidth: 420, borderRadius: 2 }} />
@@ -56,7 +56,9 @@ const AboutPage: React.FC = () => {
             </Grid>
           </Grid>
           <Grid container spacing={2} sx={{ mt: 4 }}>
-            <Grid item xs={12} sm={4}><StatCard label="Years of Service" value="45+" /></Grid>
+            <Grid xs={12} sm={4}><StatCard label="Years of Service" value="45+" /></Grid>
+            <Grid xs={12} sm={4}><StatCard label="States & FCT" value="37" /></Grid>
+            <Grid xs={12} sm={4}><StatCard label="National Chapters" value="Nationwide" /></Grid>
             <Grid item xs={12} sm={4}><StatCard label="States & FCT" value="37" /></Grid>
             <Grid item xs={12} sm={4}><StatCard label="National Chapters" value="Nationwide" /></Grid>
           </Grid>
@@ -67,7 +69,7 @@ const AboutPage: React.FC = () => {
       <Container maxWidth="lg" sx={{ py: { xs: 6, md: 8 } }}>
         <SectionHeading title="Our Core Direction" subtitle="Mission, Vision and Slogan" />
         <Grid container spacing={3}>
-          <Grid item xs={12} md={4}>
+          <Grid xs={12} md={4}>
             <Card sx={{ height: '100%', borderTop: '4px solid', borderColor: 'primary.main' }}>
               <CardContent>
                 <Typography variant="h5" sx={{ fontWeight: 800, mb: 1 }}>Mission</Typography>
@@ -77,7 +79,7 @@ const AboutPage: React.FC = () => {
               </CardContent>
             </Card>
           </Grid>
-          <Grid item xs={12} md={4}>
+          <Grid xs={12} md={4}>
             <Card sx={{ height: '100%', borderTop: '4px solid', borderColor: 'primary.main' }}>
               <CardContent>
                 <Typography variant="h5" sx={{ fontWeight: 800, mb: 1 }}>Vision</Typography>
@@ -87,7 +89,7 @@ const AboutPage: React.FC = () => {
               </CardContent>
             </Card>
           </Grid>
-          <Grid item xs={12} md={4}>
+          <Grid xs={12} md={4}>
             <Card sx={{ height: '100%', borderTop: '4px solid', borderColor: 'primary.main' }}>
               <CardContent>
                 <Typography variant="h5" sx={{ fontWeight: 800, mb: 1 }}>Slogan</Typography>
@@ -106,7 +108,7 @@ const AboutPage: React.FC = () => {
       <Container maxWidth="lg" sx={{ py: { xs: 6, md: 8 } }}>
         <SectionHeading title="Aims and Objectives" subtitle="What we are organized to achieve" />
         <Grid container spacing={3}>
-          <Grid item xs={12} md={6}>
+          <Grid xs={12} md={6}>
             <Card>
               <CardContent>
                 <Typography variant="h6" sx={{ fontWeight: 800, mb: 2 }}>Coordination & Support</Typography>
@@ -117,7 +119,7 @@ const AboutPage: React.FC = () => {
               </CardContent>
             </Card>
           </Grid>
-          <Grid item xs={12} md={6}>
+          <Grid xs={12} md={6}>
             <Card>
               <CardContent>
                 <Typography variant="h6" sx={{ fontWeight: 800, mb: 2 }}>Islamic Development</Typography>
@@ -137,7 +139,7 @@ const AboutPage: React.FC = () => {
       <Container maxWidth="lg" sx={{ py: { xs: 6, md: 8 } }}>
         <SectionHeading title="Programs" subtitle="Aligned with the NYSC calendar for maximum impact" />
         <Grid container spacing={3}>
-          <Grid item xs={12} md={4}>
+          <Grid xs={12} md={4}>
             <Card sx={{ height: '100%' }}>
               <CardContent>
                 <Typography variant="h6" sx={{ fontWeight: 800, mb: 1 }}>Pre-Orientation</Typography>
@@ -150,7 +152,7 @@ const AboutPage: React.FC = () => {
               </CardContent>
             </Card>
           </Grid>
-          <Grid item xs={12} md={4}>
+          <Grid xs={12} md={4}>
             <Card sx={{ height: '100%' }}>
               <CardContent>
                 <Typography variant="h6" sx={{ fontWeight: 800, mb: 1 }}>Orientation Camp</Typography>
@@ -163,7 +165,7 @@ const AboutPage: React.FC = () => {
               </CardContent>
             </Card>
           </Grid>
-          <Grid item xs={12} md={4}>
+          <Grid xs={12} md={4}>
             <Card sx={{ height: '100%' }}>
               <CardContent>
                 <Typography variant="h6" sx={{ fontWeight: 800, mb: 1 }}>Post-Orientation</Typography>
@@ -185,7 +187,7 @@ const AboutPage: React.FC = () => {
       <Container maxWidth="lg" sx={{ py: { xs: 6, md: 8 } }}>
         <SectionHeading title="Our Core Values" subtitle="What guides our conduct and service" />
         <Grid container spacing={3}>
-          <Grid item xs={12} md={4}>
+          <Grid xs={12} md={4}>
             <Card>
               <CardContent>
                 <Typography variant="h5" sx={{ fontWeight: 800, mb: 1 }}>Compassion</Typography>
@@ -193,7 +195,7 @@ const AboutPage: React.FC = () => {
               </CardContent>
             </Card>
           </Grid>
-          <Grid item xs={12} md={4}>
+          <Grid xs={12} md={4}>
             <Card>
               <CardContent>
                 <Typography variant="h5" sx={{ fontWeight: 800, mb: 1 }}>Knowledge</Typography>
@@ -201,7 +203,7 @@ const AboutPage: React.FC = () => {
               </CardContent>
             </Card>
           </Grid>
-          <Grid item xs={12} md={4}>
+          <Grid xs={12} md={4}>
             <Card>
               <CardContent>
                 <Typography variant="h5" sx={{ fontWeight: 800, mb: 1 }}>Service</Typography>
@@ -216,13 +218,13 @@ const AboutPage: React.FC = () => {
       <Box sx={{ bgcolor: 'primary.dark', color: 'white', py: { xs: 6, md: 8 } }}>
         <Container maxWidth="lg">
           <Grid container spacing={3} alignItems="center">
-            <Grid item xs={12} md={8}>
+            <Grid xs={12} md={8}>
               <Typography variant="h4" sx={{ fontWeight: 900, mb: 1 }}>Join MCAN</Typography>
               <Typography variant="subtitle1" sx={{ opacity: 0.9 }}>
                 Be part of a nationwide network of Muslim corps members serving Islam and the Nation.
               </Typography>
             </Grid>
-            <Grid item xs={12} md={4}>
+            <Grid xs={12} md={4}>
               <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2} sx={{ justifyContent: { md: 'flex-end' } }}>
                 <Button component={RouterLink} to="/register" size="large" variant="contained" color="secondary">
                   Register Now

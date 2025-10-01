@@ -57,7 +57,7 @@ const ContactPage: React.FC = () => {
       </Box>
 
       <Grid container spacing={4}>
-        <Grid item xs={12} md={6}>
+        <Grid xs={12} md={6}>
           <Card>
             <CardContent>
               <Typography variant="h6" sx={{ fontWeight: 800, mb: 2 }}>Send a Message</Typography>
@@ -103,7 +103,7 @@ const ContactPage: React.FC = () => {
             </CardContent>
           </Card>
         </Grid>
-        <Grid item xs={12} md={6}>
+        <Grid xs={12} md={6}>
           <Card>
             <CardContent>
               <Typography variant="h6" sx={{ fontWeight: 800, mb: 2 }}>Contact Information</Typography>

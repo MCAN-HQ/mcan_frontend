@@ -123,7 +123,7 @@ const RegisterPage: React.FC = () => {
           <Box component="form" onSubmit={handleSubmit(onSubmit)}>
             <Grid container spacing={3}>
               {/* Full Name */}
-              <Grid item xs={12} sm={6}>
+              <Grid xs={12} sm={6}>
                 <TextField
                   fullWidth
                   label="Full Name"
@@ -148,7 +148,7 @@ const RegisterPage: React.FC = () => {
               </Grid>
 
               {/* Email */}
-              <Grid item xs={12} sm={6}>
+              <Grid xs={12} sm={6}>
                 <TextField
                   fullWidth
                   label="Email Address"
@@ -174,7 +174,7 @@ const RegisterPage: React.FC = () => {
               </Grid>
 
               {/* Phone */}
-              <Grid item xs={12} sm={6}>
+              <Grid xs={12} sm={6}>
                 <TextField
                   fullWidth
                   label="Phone Number"
@@ -200,7 +200,7 @@ const RegisterPage: React.FC = () => {
               </Grid>
 
               {/* State Code */}
-              <Grid item xs={12} sm={6}>
+              <Grid xs={12} sm={6}>
                 <TextField
                   fullWidth
                   label="State Code"
@@ -222,7 +222,7 @@ const RegisterPage: React.FC = () => {
               </Grid>
 
               {/* State of Origin */}
-              <Grid item xs={12} sm={6}>
+              <Grid xs={12} sm={6}>
                 <TextField
                   fullWidth
                   label="State of Origin"
@@ -242,7 +242,7 @@ const RegisterPage: React.FC = () => {
               </Grid>
 
               {/* Service Year */}
-              <Grid item xs={12} sm={6}>
+              <Grid xs={12} sm={6}>
                 <FormControl fullWidth margin="normal">
                   <InputLabel>Service Year</InputLabel>
                   <Select
@@ -264,7 +264,7 @@ const RegisterPage: React.FC = () => {
               </Grid>
 
               {/* Deployment State */}
-              <Grid item xs={12}>
+              <Grid xs={12}>
                 <TextField
                   fullWidth
                   label="Deployment State"
@@ -284,7 +284,7 @@ const RegisterPage: React.FC = () => {
               </Grid>
 
               {/* Password */}
-              <Grid item xs={12} sm={6}>
+              <Grid xs={12} sm={6}>
                 <TextField
                   fullWidth
                   label="Password"
@@ -321,7 +321,7 @@ const RegisterPage: React.FC = () => {
               </Grid>
 
               {/* Confirm Password */}
-              <Grid item xs={12} sm={6}>
+              <Grid xs={12} sm={6}>
                 <TextField
                   fullWidth
                   label="Confirm Password"

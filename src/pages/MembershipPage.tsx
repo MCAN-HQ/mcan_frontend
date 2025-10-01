@@ -30,7 +30,7 @@ const MembershipPage: React.FC = () => {
           title: 'Networking',
           desc: 'Connect with peers and mentors across all MCAN chapters.'
         }].map((b) => (
-          <Grid item xs={12} md={4} key={b.title}>
+          <Grid xs={12} md={4} key={b.title}>
             <Card>
               <CardContent>
                 <Typography variant="h6" sx={{ fontWeight: 800, mb: 1 }}>{b.title}</Typography>

@@ -318,7 +318,7 @@ const PrayerTimes: React.FC<PrayerTimesProps> = ({
       {/* Prayer Times Grid */}
       <Grid container spacing={2}>
         {prayerTimes.map((prayer, index) => (
-          <Grid item xs={12} sm={6} md={4} key={prayer.name}>
+          <Grid xs={12} sm={6} md={4} key={prayer.name}>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -382,12 +382,12 @@ const PrayerTimes: React.FC<PrayerTimesProps> = ({
             Islamic Calendar
           </Typography>
           <Grid container spacing={2}>
-            <Grid item xs={12} sm={6}>
+            <Grid xs={12} sm={6}>
               <Typography variant="body2" color="text.secondary">
                 <strong>Hijri Date:</strong> {hijriDate}
               </Typography>
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid xs={12} sm={6}>
               <Typography variant="body2" color="text.secondary">
                 <strong>Qibla Direction:</strong> {qiblaDirection ? `${Math.round(qiblaDirection)}°` : 'Calculating...'}
                 {qiblaDirection && (

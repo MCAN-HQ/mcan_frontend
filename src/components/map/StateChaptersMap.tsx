@@ -201,7 +201,7 @@ const StateChaptersMap: React.FC = () => {
       {/* Interactive Map Grid */}
       <Grid container spacing={3}>
         {stateChapters.map((state, index) => (
-          <Grid item xs={12} sm={6} md={4} key={state.id}>
+          <Grid xs={12} sm={6} md={4} key={state.id}>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -311,7 +311,7 @@ const StateChaptersMap: React.FC = () => {
           {selectedState && (
             <Grid container spacing={3}>
               {/* Contact Information */}
-              <Grid item xs={12} md={6}>
+               <Grid xs={12} md={6}>
                 <Card sx={{ mb: 3 }}>
                   <CardContent>
                     <Typography variant="h6" fontWeight="bold" sx={{ mb: 2 }}>
@@ -374,14 +374,14 @@ const StateChaptersMap: React.FC = () => {
               </Grid>
 
               {/* Statistics */}
-              <Grid item xs={12} md={6}>
+              <Grid xs={12} md={6}>
                 <Card sx={{ mb: 3 }}>
                   <CardContent>
                     <Typography variant="h6" fontWeight="bold" sx={{ mb: 2 }}>
                       Chapter Statistics
                     </Typography>
                     <Grid container spacing={2}>
-                      <Grid item xs={6}>
+                       <Grid xs={6}>
                         <Box sx={{ textAlign: 'center', p: 2, bgcolor: 'primary.light', borderRadius: 2 }}>
                           <Typography variant="h4" fontWeight="bold" color="primary.dark">
                             {selectedState.memberCount}
@@ -391,7 +391,7 @@ const StateChaptersMap: React.FC = () => {
                           </Typography>
                         </Box>
                       </Grid>
-                      <Grid item xs={6}>
+                      <Grid xs={6}>
                         <Box sx={{ textAlign: 'center', p: 2, bgcolor: 'secondary.light', borderRadius: 2 }}>
                           <Typography variant="h4" fontWeight="bold" color="secondary.dark">
                             {selectedState.properties}
@@ -407,7 +407,7 @@ const StateChaptersMap: React.FC = () => {
               </Grid>
 
               {/* Activities */}
-              <Grid item xs={12}>
+               <Grid xs={12}>
                 <Card>
                   <CardContent>
                     <Typography variant="h6" fontWeight="bold" sx={{ mb: 2 }}>
@@ -429,7 +429,7 @@ const StateChaptersMap: React.FC = () => {
               </Grid>
 
               {/* Social Media */}
-              <Grid item xs={12}>
+              <Grid xs={12}>
                 <Card>
                   <CardContent>
                     <Typography variant="h6" fontWeight="bold" sx={{ mb: 2 }}>

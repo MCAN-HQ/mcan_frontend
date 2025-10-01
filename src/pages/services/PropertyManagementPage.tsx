@@ -186,7 +186,7 @@ const PropertyManagementPage: React.FC = () => {
 
       <Paper sx={{ p: 2, mb: 3 }}>
         <Grid container spacing={2}>
-          <Grid item xs={12} md={4}>
+          <Grid xs={12} md={4}>
             <TextField
               fullWidth
               label="Search"
@@ -203,7 +203,7 @@ const PropertyManagementPage: React.FC = () => {
             />
           </Grid>
 
-          <Grid item xs={12} md={4}>
+          <Grid xs={12} md={4}>
             <TextField
               fullWidth
               select
@@ -226,7 +226,7 @@ const PropertyManagementPage: React.FC = () => {
             </TextField>
           </Grid>
 
-          <Grid item xs={12} md={4}>
+          <Grid xs={12} md={4}>
             <TextField
               fullWidth
               select
@@ -253,7 +253,7 @@ const PropertyManagementPage: React.FC = () => {
 
       <Grid container spacing={2}>
         {properties.map((p) => (
-          <Grid item xs={12} md={6} lg={4} key={p.id}>
+          <Grid xs={12} md={6} lg={4} key={p.id}>
             <Paper sx={{ p: 2, height: '100%', display: 'flex', flexDirection: 'column' }}>
               <Typography variant="h6" fontWeight="bold" sx={{ mb: 1 }}>{p.name}</Typography>
               <Typography variant="body2" color="text.secondary" sx={{ mb: 1 }}>{p.location} • {p.state}</Typography>
@@ -323,7 +323,7 @@ const PropertyManagementPage: React.FC = () => {
         ))}
         
         {!isLoading && properties.length === 0 && (
-          <Grid item xs={12}>
+          <Grid xs={12}>
             <Paper sx={{ p: 3, textAlign: 'center' }}>
               <Typography variant="h6" color="text.secondary" sx={{ mb: 2 }}>
                 No properties found
@@ -352,15 +352,15 @@ const PropertyManagementPage: React.FC = () => {
               </Typography>
               
               <Grid container spacing={2} sx={{ mb: 2 }}>
-                <Grid item xs={12} sm={6}>
+                <Grid xs={12} sm={6}>
                   <Typography variant="body2" color="text.secondary">Location</Typography>
                   <Typography variant="body1">{selectedProperty.location}, {selectedProperty.state}</Typography>
                 </Grid>
-                <Grid item xs={12} sm={6}>
+                <Grid xs={12} sm={6}>
                   <Typography variant="body2" color="text.secondary">Type</Typography>
                   <Typography variant="body1">{selectedProperty.type}</Typography>
                 </Grid>
-                <Grid item xs={12} sm={6}>
+                <Grid xs={12} sm={6}>
                   <Typography variant="body2" color="text.secondary">Status</Typography>
                   <Chip 
                     label={selectedProperty.status} 
@@ -368,7 +368,7 @@ const PropertyManagementPage: React.FC = () => {
                     size="small"
                   />
                 </Grid>
-                <Grid item xs={12} sm={6}>
+                <Grid xs={12} sm={6}>
                   <Typography variant="body2" color="text.secondary">Condition</Typography>
                   <Chip 
                     label={selectedProperty.condition || 'N/A'} 
@@ -377,13 +377,13 @@ const PropertyManagementPage: React.FC = () => {
                   />
                 </Grid>
                 {selectedProperty.capacity && (
-                  <Grid item xs={12} sm={6}>
+                  <Grid xs={12} sm={6}>
                     <Typography variant="body2" color="text.secondary">Capacity</Typography>
                     <Typography variant="body1">{selectedProperty.capacity} people</Typography>
                   </Grid>
                 )}
                 {selectedProperty.manager && (
-                  <Grid item xs={12} sm={6}>
+                  <Grid xs={12} sm={6}>
                     <Typography variant="body2" color="text.secondary">Manager</Typography>
                     <Typography variant="body1">{selectedProperty.manager}</Typography>
                   </Grid>

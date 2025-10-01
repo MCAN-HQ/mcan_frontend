@@ -224,7 +224,7 @@ const IslamicResources: React.FC = () => {
       {/* Search and Filter */}
       <Paper sx={{ p: 3, mb: 4 }}>
         <Grid container spacing={2} alignItems="center">
-          <Grid item xs={12} md={6}>
+          <Grid xs={12} md={6}>
             <TextField
               fullWidth
               placeholder="Search Islamic resources..."
@@ -241,7 +241,7 @@ const IslamicResources: React.FC = () => {
       {/* Resources Grid */}
       <Grid container spacing={3}>
         {filteredResources.map((resource, index) => (
-          <Grid item xs={12} sm={6} md={4} key={resource.id}>
+          <Grid xs={12} sm={6} md={4} key={resource.id}>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -388,7 +388,7 @@ const IslamicResources: React.FC = () => {
               </Typography>
 
               <Grid container spacing={2} sx={{ mb: 3 }}>
-                <Grid item xs={6}>
+                <Grid xs={6}>
                   <Box sx={{ textAlign: 'center', p: 2, bgcolor: 'primary.light', borderRadius: 2 }}>
                     <Typography variant="h4" fontWeight="bold" color="primary.dark">
                       {selectedResource.rating}
@@ -398,7 +398,7 @@ const IslamicResources: React.FC = () => {
                     </Typography>
                   </Box>
                 </Grid>
-                <Grid item xs={6}>
+                <Grid xs={6}>
                   <Box sx={{ textAlign: 'center', p: 2, bgcolor: 'secondary.light', borderRadius: 2 }}>
                     <Typography variant="h4" fontWeight="bold" color="secondary.dark">
                       {selectedResource.downloads.toLocaleString()}

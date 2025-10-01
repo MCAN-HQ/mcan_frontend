@@ -75,7 +75,7 @@ const Footer: React.FC = () => {
       <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 2 }}>
         <Grid container spacing={6}>
           {/* MCAN Info */}
-          <Grid item xs={12} md={4}>
+          <Grid xs={12} md={4}>
             <Box>
               <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
                 <Box
@@ -148,7 +148,7 @@ const Footer: React.FC = () => {
           </Grid>
 
           {/* Quick Links */}
-          <Grid item xs={12} sm={6} md={2}>
+          <Grid xs={12} sm={6} md={2}>
             <Typography
               variant="h6"
               component="div"
@@ -189,7 +189,7 @@ const Footer: React.FC = () => {
           </Grid>
 
           {/* Services */}
-          <Grid item xs={12} sm={6} md={3}>
+          <Grid xs={12} sm={6} md={3}>
             <Typography
               variant="h6"
               component="div"
@@ -230,7 +230,7 @@ const Footer: React.FC = () => {
           </Grid>
 
           {/* Social Media & Newsletter */}
-          <Grid item xs={12} md={3}>
+          <Grid xs={12} md={3}>
             <Typography
               variant="h6"
               component="div"

@@ -250,7 +250,7 @@ const HomePage: React.FC = () => {
         
         <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 2 }}>
           <Grid container spacing={4} alignItems="center">
-            <Grid item xs={12} md={6}>
+            <Grid xs={12} md={6}>
               <Fade in={isVisible} timeout={1000}>
                 <Box>
                   <Chip
@@ -360,7 +360,7 @@ const HomePage: React.FC = () => {
               </Fade>
             </Grid>
             
-            <Grid item xs={12} md={6}>
+            <Grid xs={12} md={6}>
               <Fade in={isVisible} timeout={1500}>
                 <Box sx={{ textAlign: 'center' }}>
                   <Box
@@ -413,7 +413,7 @@ const HomePage: React.FC = () => {
           
           <Grid container spacing={4}>
             {stats.map((stat, index) => (
-              <Grid item xs={12} sm={6} md={3} key={index}>
+              <Grid xs={12} sm={6} md={3} key={index}>
                 <Slide direction="up" in={isVisible} timeout={1000 + index * 200}>
                   <Card
                     sx={{
@@ -500,7 +500,7 @@ const HomePage: React.FC = () => {
           
           <Grid container spacing={4}>
             {features.map((feature, index) => (
-              <Grid item xs={12} md={6} key={index}>
+              <Grid xs={12} md={6} key={index}>
                 <Zoom in={isVisible} timeout={1000 + index * 200}>
                   <Card
                     sx={{
@@ -581,7 +581,7 @@ const HomePage: React.FC = () => {
           
           <Grid container spacing={4}>
             {services.map((service, index) => (
-              <Grid item xs={12} md={4} key={index}>
+              <Grid xs={12} md={4} key={index}>
                 <Slide direction="up" in={isVisible} timeout={1000 + index * 200}>
                   <Card
                     sx={{
@@ -653,7 +653,7 @@ const HomePage: React.FC = () => {
           
           <Grid container spacing={4}>
             {testimonials.slice(0, 3).map((testimonial, index) => (
-              <Grid item xs={12} md={4} key={index}>
+              <Grid xs={12} md={4} key={index}>
                 <Slide direction="up" in={isVisible} timeout={1000 + index * 200}>
                   <Card
                     sx={{

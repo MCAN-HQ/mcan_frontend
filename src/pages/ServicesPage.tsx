@@ -85,7 +85,7 @@ const ServicesPage: React.FC = () => {
 
       <Grid container spacing={3}>
         {services.map((service) => (
-          <Grid item xs={12} md={6} lg={4} key={service.id}>
+          <Grid xs={12} md={6} lg={4} key={service.id}>
             <Card 
               elevation={service.available ? 3 : 1} 
               sx={{ 

@@ -149,7 +149,7 @@ const DashboardPage: React.FC = () => {
       {/* Stats Cards */}
       <Grid container spacing={3} sx={{ mb: 4 }}>
         {getStatsForRole().map((stat, index) => (
-          <Grid item xs={12} sm={6} md={3} key={index}>
+          <Grid xs={12} sm={6} md={3} key={index}>
             <StatsCard {...stat} />
           </Grid>
         ))}
@@ -158,7 +158,7 @@ const DashboardPage: React.FC = () => {
       {/* Charts and Additional Content */}
       <Grid container spacing={3}>
         {/* Member Growth Chart */}
-        <Grid item xs={12} lg={8}>
+        <Grid xs={12} lg={8}>
           <DashboardChart
             title="Member Growth"
             data={memberStats}
@@ -168,7 +168,7 @@ const DashboardPage: React.FC = () => {
         </Grid>
 
         {/* Prayer Times */}
-        <Grid item xs={12} lg={4}>
+        <Grid xs={12} lg={4}>
           <Card sx={{ height: '100%' }}>
             <CardContent>
               <Typography variant="h6" sx={{ mb: 2, fontWeight: 'bold' }}>
@@ -180,12 +180,12 @@ const DashboardPage: React.FC = () => {
         </Grid>
 
         {/* Digital ID */}
-        <Grid item xs={12}>
+        <Grid xs={12}>
           <EIDCard />
         </Grid>
 
         {/* Payment Status Chart */}
-        <Grid item xs={12} md={6}>
+        <Grid xs={12} md={6}>
           <DashboardChart
             title="Payment Status"
             data={paymentData}
@@ -194,7 +194,7 @@ const DashboardPage: React.FC = () => {
         </Grid>
 
         {/* State Distribution */}
-        <Grid item xs={12} md={6}>
+        <Grid xs={12} md={6}>
           <DashboardChart
             title="Member Distribution by State"
             data={stateDistribution}
