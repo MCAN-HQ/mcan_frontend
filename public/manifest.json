@@ -1,0 +1,64 @@
+{
+  "short_name": "MCAN",
+  "name": "Muslim Corpers Association of Nigeria",
+  "description": "Serving Islam through the Nation - Uniting Muslim Corps Members Across Nigeria",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "mcanlogo.jpg",
+      "type": "image/jpeg",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "mcanlogo.jpg",
+      "type": "image/jpeg",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#2E7D32",
+  "background_color": "#ffffff",
+  "orientation": "portrait-primary",
+  "categories": ["education", "lifestyle", "social"],
+  "lang": "en",
+  "dir": "ltr",
+  "scope": "/",
+  "shortcuts": [
+    {
+      "name": "Dashboard",
+      "short_name": "Dashboard",
+      "description": "Access your MCAN dashboard",
+      "url": "/dashboard",
+      "icons": [{ "src": "mcanlogo.jpg", "sizes": "192x192" }]
+    },
+    {
+      "name": "Prayer Times",
+      "short_name": "Prayer",
+      "description": "Check prayer times",
+      "url": "/prayer-times",
+      "icons": [{ "src": "mcanlogo.jpg", "sizes": "192x192" }]
+    },
+    {
+      "name": "Membership",
+      "short_name": "Join",
+      "description": "Join MCAN",
+      "url": "/membership",
+      "icons": [{ "src": "mcanlogo.jpg", "sizes": "192x192" }]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "mcanlogo.jpg",
+      "type": "image/jpeg",
+      "sizes": "1280x720",
+      "form_factor": "wide"
+    }
+  ]
+}
