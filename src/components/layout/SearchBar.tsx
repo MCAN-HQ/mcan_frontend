@@ -7,6 +7,7 @@ import {
   Paper,
   List,
   ListItem,
+  ListItemButton,
   ListItemText,
   ListItemIcon,
   Typography,
@@ -199,28 +200,29 @@ const SearchBar: React.FC<SearchBarProps> = ({
                 <List sx={{ p: 0 }}>
                   {results.map((result, index) => (
                     <React.Fragment key={result.id}>
-                      <ListItem
-                        button
-                        onClick={() => handleResultClick(result)}
-                        sx={{
-                          '&:hover': {
-                            backgroundColor: 'action.hover',
-                          },
-                        }}
-                      >
-                        <ListItemIcon sx={{ color: 'primary.main' }}>
-                          {result.icon}
-                        </ListItemIcon>
-                        <ListItemText
-                          primary={result.title}
-                          secondary={result.description}
-                        />
-                        <Chip
-                          label={result.type}
-                          size="small"
-                          color={getTypeColor(result.type) as any}
-                          variant="outlined"
-                        />
+                      <ListItem disablePadding>
+                        <ListItemButton
+                          onClick={() => handleResultClick(result)}
+                          sx={{
+                            '&:hover': {
+                              backgroundColor: 'action.hover',
+                            },
+                          }}
+                        >
+                          <ListItemIcon sx={{ color: 'primary.main' }}>
+                            {result.icon}
+                          </ListItemIcon>
+                          <ListItemText
+                            primary={result.title}
+                            secondary={result.description}
+                          />
+                          <Chip
+                            label={result.type}
+                            size="small"
+                            color={getTypeColor(result.type) as any}
+                            variant="outlined"
+                          />
+                        </ListItemButton>
                       </ListItem>
                       {index < results.length - 1 && <Divider />}
                     </React.Fragment>
