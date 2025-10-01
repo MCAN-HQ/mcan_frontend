@@ -40,7 +40,7 @@ import {
   Dashboard as DashboardIcon,
 } from '@mui/icons-material';
 import { useAuth } from '../../contexts/AuthContext';
-import { User, UserRole } from '../../types';
+import type { User, UserRole } from '../../types';
 import adminService from '../../services/adminService';
 
 interface TabPanelProps {
@@ -84,7 +84,7 @@ const AdminDashboard: React.FC = () => {
     serviceYear: '',
   });
 
-  const handleTabChange = (event: React.SyntheticEvent, newValue: number) => {
+  const handleTabChange = (_event: React.SyntheticEvent, newValue: number) => {
     setTabValue(newValue);
   };
 

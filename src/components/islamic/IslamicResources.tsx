@@ -51,11 +51,11 @@ interface IslamicResource {
 }
 
 const IslamicResources: React.FC = () => {
-  const [activeTab, setActiveTab] = useState(0);
+  const [_activeTab] = useState(0);
   const [selectedResource, setSelectedResource] = useState<IslamicResource | null>(null);
   const [dialogOpen, setDialogOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
-  const [filterCategory, setFilterCategory] = useState('all');
+  const [filterCategory] = useState('all');
 
   const resources: IslamicResource[] = [
     {
@@ -152,9 +152,6 @@ const IslamicResources: React.FC = () => {
       url: '/duas',
     },
   ];
-
-  const categories = ['all', 'Quran', 'Hadith', 'History', 'Fiqh', 'Duas', 'Audio', 'Video'];
-  const types = ['quran', 'hadith', 'education', 'audio', 'video'];
 
   const getTypeIcon = (type: string) => {
     switch (type) {
