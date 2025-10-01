@@ -7,8 +7,8 @@ import CssBaseline from '@mui/material/CssBaseline';
 import { Toaster } from 'react-hot-toast';
 
 import App from './App';
-import { theme } from './utils/theme';
-import { AuthProvider } from './contexts/AuthContext';
+import { theme } from './src/utils/theme';
+import { AuthProvider } from './src/contexts/AuthContext';
 import './index.css';
 
 // Register service worker for PWA
