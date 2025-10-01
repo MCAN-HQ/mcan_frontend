@@ -16,17 +16,14 @@ import {
   ListItemText,
   ListItemIcon,
   Avatar,
-  Divider,
   IconButton,
   Tooltip,
-  Badge,
 } from '@mui/material';
 import {
   LocationOn,
   Phone,
   Email,
   People,
-  Business,
   Close,
   Directions,
   WhatsApp,

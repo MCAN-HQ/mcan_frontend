@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import React, { useState } from 'react';
 import {
   Box,
   Card,
@@ -8,22 +7,15 @@ import {
   Grid,
   Chip,
   Button,
-  Tabs,
-  Tab,
-  List,
-  ListItem,
-  ListItemText,
-  ListItemIcon,
-  Avatar,
+  TextField,
+  IconButton,
+  Tooltip,
+  Paper,
   Dialog,
   DialogTitle,
   DialogContent,
   DialogActions,
-  TextField,
-  IconButton,
-  Tooltip,
-  Divider,
-  Paper,
+  Avatar,
 } from '@mui/material';
 import {
   MenuBook,
@@ -34,12 +26,8 @@ import {
   Favorite,
   Bookmark,
   Search,
-  FilterList,
   Close,
   VolumeUp,
-  Translate,
-  Lightbulb,
-  History,
   Star,
 } from '@mui/icons-material';
 import { motion } from 'framer-motion';
@@ -246,19 +234,6 @@ const IslamicResources: React.FC = () => {
                 startAdornment: <Search sx={{ mr: 1, color: 'text.secondary' }} />,
               }}
             />
-          </Grid>
-          <Grid item xs={12} md={6}>
-            <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap' }}>
-              {categories.map((category) => (
-                <Chip
-                  key={category}
-                  label={category}
-                  onClick={() => setFilterCategory(category)}
-                  color={filterCategory === category ? 'primary' : 'default'}
-                  variant={filterCategory === category ? 'filled' : 'outlined'}
-                />
-              ))}
-            </Box>
           </Grid>
         </Grid>
       </Paper>

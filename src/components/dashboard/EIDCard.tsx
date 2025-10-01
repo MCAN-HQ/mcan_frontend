@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Card, CardContent, CardActions, Button, Typography, Box, CircularProgress, Alert } from '@mui/material';
 import { Download } from '@mui/icons-material';
-import { eidService, EIDCard as EIDCardType } from '../../services/eidService';
+import { eidService, type EIDCard as EIDCardType } from '../../services/eidService';
 
 interface Props {
   autoGenerateIfMissing?: boolean;
