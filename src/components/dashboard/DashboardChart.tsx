@@ -27,6 +27,7 @@ interface ChartData {
   name: string;
   value: number;
   color?: string;
+  [key: string]: string | number | undefined;
 }
 
 interface DashboardChartProps {
@@ -50,7 +51,7 @@ const DashboardChart: React.FC<DashboardChartProps> = ({
 }) => {
   const [chartType, setChartType] = React.useState(type);
 
-  const handleToggleChange = (event: React.MouseEvent<HTMLElement>, newType: string) => {
+  const handleToggleChange = (_event: React.MouseEvent<HTMLElement>, newType: string) => {
     if (newType !== null) {
       setChartType(newType as 'bar' | 'line' | 'pie');
       onToggleChange?.(newType);
@@ -100,7 +101,7 @@ const DashboardChart: React.FC<DashboardChartProps> = ({
                 cx="50%"
                 cy="50%"
                 labelLine={false}
-                label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
+                label={({ name, percent }: any) => `${name} ${(percent * 100).toFixed(0)}%`}
                 outerRadius={80}
                 fill="#8884d8"
                 dataKey="value"

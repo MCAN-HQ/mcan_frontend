@@ -12,6 +12,7 @@ import {
   Drawer,
   List,
   ListItem,
+  ListItemButton,
   ListItemText,
   ListItemIcon,
   useMediaQuery,
@@ -115,22 +116,22 @@ const Navbar: React.FC = () => {
       
       <List>
         {navigationItems.map((item) => (
-          <ListItem
-            key={item.path}
-            button
-            onClick={() => handleNavigation(item.path)}
-            selected={location.pathname === item.path}
-            sx={{
-              '&.Mui-selected': {
-                backgroundColor: 'rgba(46, 125, 50, 0.1)',
-                '& .MuiListItemIcon-root': {
-                  color: 'primary.main',
+          <ListItem key={item.path} disablePadding>
+            <ListItemButton
+              onClick={() => handleNavigation(item.path)}
+              selected={location.pathname === item.path}
+              sx={{
+                '&.Mui-selected': {
+                  backgroundColor: 'rgba(46, 125, 50, 0.1)',
+                  '& .MuiListItemIcon-root': {
+                    color: 'primary.main',
+                  },
                 },
-              },
-            }}
-          >
-            <ListItemIcon>{item.icon}</ListItemIcon>
-            <ListItemText primary={item.label} />
+              }}
+            >
+              <ListItemIcon>{item.icon}</ListItemIcon>
+              <ListItemText primary={item.label} />
+            </ListItemButton>
           </ListItem>
         ))}
         
@@ -147,29 +148,31 @@ const Navbar: React.FC = () => {
               />
             </ListItem>
             {userMenuItems.map((item) => (
-              <ListItem
-                key={item.path}
-                button
-                onClick={() => handleNavigation(item.path)}
-                selected={location.pathname === item.path}
-                sx={{
-                  '&.Mui-selected': {
-                    backgroundColor: 'rgba(46, 125, 50, 0.1)',
-                    '& .MuiListItemIcon-root': {
-                      color: 'primary.main',
+              <ListItem key={item.path} disablePadding>
+                <ListItemButton
+                  onClick={() => handleNavigation(item.path)}
+                  selected={location.pathname === item.path}
+                  sx={{
+                    '&.Mui-selected': {
+                      backgroundColor: 'rgba(46, 125, 50, 0.1)',
+                      '& .MuiListItemIcon-root': {
+                        color: 'primary.main',
+                      },
                     },
-                  },
-                }}
-              >
-                <ListItemIcon>{item.icon}</ListItemIcon>
-                <ListItemText primary={item.label} />
+                  }}
+                >
+                  <ListItemIcon>{item.icon}</ListItemIcon>
+                  <ListItemText primary={item.label} />
+                </ListItemButton>
               </ListItem>
             ))}
-            <ListItem button onClick={handleLogout}>
-              <ListItemIcon>
-                <Logout />
-              </ListItemIcon>
-              <ListItemText primary="Logout" />
+            <ListItem disablePadding>
+              <ListItemButton onClick={handleLogout}>
+                <ListItemIcon>
+                  <Logout />
+                </ListItemIcon>
+                <ListItemText primary="Logout" />
+              </ListItemButton>
             </ListItem>
           </>
         )}
