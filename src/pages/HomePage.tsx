@@ -19,7 +19,6 @@ import {
   People,
   Business,
   LocationOn,
-  Star,
   TrendingUp,
   Security,
   Support,
@@ -59,7 +58,7 @@ const HomePage: React.FC = () => {
     { 
       label: 'Years of Service', 
       value: '45+', 
-      icon: <Star sx={{ fontSize: 40 }} />, 
+      icon: <TrendingUp sx={{ fontSize: 40 }} />, 
       gradient: 'linear-gradient(135deg, #FF9800 0%, #FFB74D 100%)',
       description: 'Dedicated Service'
     },
@@ -130,56 +129,6 @@ const HomePage: React.FC = () => {
     },
   ];
 
-  const testimonials = [
-    {
-      name: 'Aisha Ibrahim',
-      role: 'Corps Member, Lagos State',
-      content: 'MCAN has revolutionized how we manage our NYSC experience. The digital platform makes everything so seamless! The prayer times feature keeps me connected to my faith, and the property management system helped me find perfect accommodation.',
-      avatar: 'AI',
-      rating: 5,
-      year: '2023'
-    },
-    {
-      name: 'Hassan Musa',
-      role: 'State Secretary, Abuja',
-      content: 'The property management system has made our work so much easier. We can track everything in real-time, and the Islamic resources section has been invaluable for our educational programs.',
-      avatar: 'HM',
-      rating: 5,
-      year: '2022'
-    },
-    {
-      name: 'Fatima Bello',
-      role: 'Corps Member, Kano',
-      content: 'The support system is amazing. I got help within minutes when I needed assistance with my accommodation. The state chapters map helped me connect with local MCAN members in my area.',
-      avatar: 'FB',
-      rating: 5,
-      year: '2023'
-    },
-    {
-      name: 'Yusuf Abdullahi',
-      role: 'Former Corps Member, Rivers State',
-      content: 'MCAN provided me with not just accommodation but a community. The Islamic resources helped me deepen my understanding of Islam during my service year.',
-      avatar: 'YA',
-      rating: 5,
-      year: '2021'
-    },
-    {
-      name: 'Maryam Hassan',
-      role: 'State Ameer, Kaduna',
-      content: 'Leading our state chapter has been made so much easier with MCAN\'s digital tools. The real-time analytics and member management features are outstanding.',
-      avatar: 'MH',
-      rating: 5,
-      year: '2022'
-    },
-    {
-      name: 'Ibrahim Suleiman',
-      role: 'Corps Member, Ogun State',
-      content: 'The prayer times with location detection is a game-changer! It automatically adjusts to my location as I travel for my primary assignment. MCAN truly understands our needs.',
-      avatar: 'IS',
-      rating: 5,
-      year: '2023'
-    },
-  ];
 
   return (
     <Box sx={{ minHeight: '100vh' }}>
@@ -248,9 +197,9 @@ const HomePage: React.FC = () => {
           }}
         />
         
-        <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 2 }}>
-          <Grid container spacing={4} alignItems="center">
-            <Grid xs={12} md={6}>
+        <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 2, px: { xs: 2, sm: 3 } }}>
+          <Grid container spacing={{ xs: 3, md: 4 }} alignItems="center">
+            <Grid xs={12} md={6} sx={{ order: { xs: 2, md: 1 } }}>
               <Fade in={isVisible} timeout={1000}>
                 <Box>
                   <Chip
@@ -271,16 +220,17 @@ const HomePage: React.FC = () => {
                   <Typography
                     variant="h1"
                     sx={{
-                      fontSize: { xs: '2.8rem', md: '4.5rem' },
+                      fontSize: { xs: '1.8rem', sm: '2.2rem', md: '3.5rem', lg: '4.5rem' },
                       fontWeight: 900,
-                      lineHeight: 1.1,
-                      mb: 4,
+                      lineHeight: { xs: 1.2, md: 1.1 },
+                      mb: { xs: 2, md: 4 },
                       background: 'linear-gradient(135deg, #FFFFFF 0%, #F5F5F5 50%, #E0E0E0 100%)',
                       backgroundClip: 'text',
                       WebkitBackgroundClip: 'text',
                       WebkitTextFillColor: 'transparent',
                       textShadow: '0 4px 8px rgba(0,0,0,0.1)',
                       letterSpacing: '-0.02em',
+                      textAlign: { xs: 'center', md: 'left' },
                     }}
                   >
                     Muslim Corpers Association of Nigeria
@@ -289,19 +239,28 @@ const HomePage: React.FC = () => {
                   <Typography
                     variant="h5"
                     sx={{
-                      mb: 5,
+                      mb: { xs: 3, md: 5 },
                       opacity: 0.95,
                       fontWeight: 400,
-                      lineHeight: 1.7,
-                      fontSize: { xs: '1.1rem', md: '1.3rem' },
-                      maxWidth: '90%',
+                      lineHeight: { xs: 1.5, md: 1.7 },
+                      fontSize: { xs: '1rem', sm: '1.1rem', md: '1.3rem' },
+                      maxWidth: { xs: '100%', md: '90%' },
+                      textAlign: { xs: 'center', md: 'left' },
+                      px: { xs: 2, md: 0 },
                     }}
                   >
                     Empowering Muslim Corps Members across Nigeria with digital solutions, 
                     community support, and comprehensive services for a fulfilling NYSC experience.
                   </Typography>
                   
-                  <Stack direction={{ xs: 'column', sm: 'row' }} spacing={3}>
+                  <Stack 
+                    direction={{ xs: 'column', sm: 'row' }} 
+                    spacing={{ xs: 2, sm: 3 }}
+                    sx={{ 
+                      width: { xs: '100%', sm: 'auto' },
+                      alignItems: { xs: 'center', sm: 'flex-start' }
+                    }}
+                  >
                     <Button
                       variant="contained"
                       size="large"
@@ -310,14 +269,16 @@ const HomePage: React.FC = () => {
                       sx={{
                         background: 'linear-gradient(135deg, #FF8F00 0%, #FFB74D 100%)',
                         color: 'white',
-                        px: 5,
-                        py: 2,
-                        fontSize: '1.2rem',
+                        px: { xs: 4, sm: 5 },
+                        py: { xs: 1.5, sm: 2 },
+                        fontSize: { xs: '1rem', sm: '1.2rem' },
                         fontWeight: 700,
                         borderRadius: 4,
                         boxShadow: '0 8px 25px rgba(255, 143, 0, 0.3)',
                         textTransform: 'none',
                         transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+                        minHeight: { xs: 48, sm: 56 },
+                        width: { xs: '100%', sm: 'auto' },
                         '&:hover': {
                           background: 'linear-gradient(135deg, #E65100 0%, #FF9800 100%)',
                           transform: 'translateY(-3px)',
@@ -336,15 +297,17 @@ const HomePage: React.FC = () => {
                       sx={{
                         borderColor: 'rgba(255, 255, 255, 0.6)',
                         color: 'white',
-                        px: 5,
-                        py: 2,
-                        fontSize: '1.2rem',
+                        px: { xs: 4, sm: 5 },
+                        py: { xs: 1.5, sm: 2 },
+                        fontSize: { xs: '1rem', sm: '1.2rem' },
                         fontWeight: 700,
                         borderRadius: 4,
                         backdropFilter: 'blur(10px)',
                         backgroundColor: 'rgba(255, 255, 255, 0.05)',
                         textTransform: 'none',
                         transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+                        minHeight: { xs: 48, sm: 56 },
+                        width: { xs: '100%', sm: 'auto' },
                         '&:hover': {
                           borderColor: 'white',
                           background: 'rgba(255, 255, 255, 0.15)',
@@ -360,9 +323,9 @@ const HomePage: React.FC = () => {
               </Fade>
             </Grid>
             
-            <Grid xs={12} md={6}>
+            <Grid xs={12} md={6} sx={{ order: { xs: 1, md: 2 } }}>
               <Fade in={isVisible} timeout={1500}>
-                <Box sx={{ textAlign: 'center' }}>
+                <Box sx={{ textAlign: 'center', mb: { xs: 4, md: 0 } }}>
                   <Box
                     sx={{
                       position: 'relative',
@@ -383,8 +346,8 @@ const HomePage: React.FC = () => {
                     <Avatar
                       src={mcanLogo}
                       sx={{
-                        width: { xs: 200, md: 300 },
-                        height: { xs: 200, md: 300 },
+                        width: { xs: 150, sm: 200, md: 300 },
+                        height: { xs: 150, sm: 200, md: 300 },
                         border: '4px solid rgba(255, 255, 255, 0.2)',
                         backdropFilter: 'blur(10px)',
                       }}
@@ -398,27 +361,43 @@ const HomePage: React.FC = () => {
       </Box>
 
       {/* Stats Section */}
-      <Box sx={{ py: 8, background: theme.palette.background.default }}>
-        <Container maxWidth="lg">
+      <Box sx={{ py: { xs: 4, md: 8 }, background: theme.palette.background.default }}>
+        <Container maxWidth="lg" sx={{ px: { xs: 2, sm: 3 } }}>
           <Fade in={isVisible} timeout={1000}>
-            <Box sx={{ textAlign: 'center', mb: 6 }}>
-              <Typography variant="h2" sx={{ mb: 2 }}>
+            <Box sx={{ textAlign: 'center', mb: { xs: 4, md: 6 } }}>
+              <Typography 
+                variant="h2" 
+                sx={{ 
+                  mb: 2,
+                  fontSize: { xs: '1.8rem', sm: '2.2rem', md: '3rem' },
+                  lineHeight: { xs: 1.2, md: 1.1 }
+                }}
+              >
                 Our Impact
               </Typography>
-              <Typography variant="h6" color="text.secondary" sx={{ maxWidth: 600, mx: 'auto' }}>
+              <Typography 
+                variant="h6" 
+                color="text.secondary" 
+                sx={{ 
+                  maxWidth: 600, 
+                  mx: 'auto',
+                  fontSize: { xs: '1rem', sm: '1.1rem', md: '1.25rem' },
+                  px: { xs: 2, md: 0 }
+                }}
+              >
                 Empowering Muslim Corps Members across Nigeria with digital solutions and community support
               </Typography>
             </Box>
           </Fade>
           
-          <Grid container spacing={4}>
+          <Grid container spacing={{ xs: 2, sm: 3, md: 4 }}>
             {stats.map((stat, index) => (
               <Grid xs={12} sm={6} md={3} key={index}>
                 <Slide direction="up" in={isVisible} timeout={1000 + index * 200}>
                   <Card
                     sx={{
                       textAlign: 'center',
-                      p: 3,
+                      p: { xs: 2, sm: 3 },
                       height: '100%',
                       background: theme.palette.mode === 'dark'
                         ? 'linear-gradient(145deg, #1A1A1A 0%, #2A2A2A 100%)'
@@ -426,8 +405,8 @@ const HomePage: React.FC = () => {
                       border: '1px solid rgba(0, 0, 0, 0.05)',
                       transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
                       '&:hover': {
-                        transform: 'translateY(-8px)',
-                        boxShadow: '0 20px 40px rgba(0, 0, 0, 0.1)',
+                        transform: { xs: 'none', md: 'translateY(-8px)' },
+                        boxShadow: { xs: '0 4px 12px rgba(0, 0, 0, 0.1)', md: '0 20px 40px rgba(0, 0, 0, 0.1)' },
                       },
                     }}
                   >
@@ -480,25 +459,41 @@ const HomePage: React.FC = () => {
       </Box>
 
       {/* Features Section */}
-      <Box sx={{ py: 8, background: theme.palette.background.paper }}>
-        <Container maxWidth="lg">
+      <Box sx={{ py: { xs: 4, md: 8 }, background: theme.palette.background.paper }}>
+        <Container maxWidth="lg" sx={{ px: { xs: 2, sm: 3 } }}>
           <Fade in={isVisible} timeout={1000}>
-            <Box sx={{ textAlign: 'center', mb: 8 }}>
+            <Box sx={{ textAlign: 'center', mb: { xs: 4, md: 8 } }}>
               <Chip
                 label="Features"
                 color="primary"
                 sx={{ fontWeight: 700, mb: 2 }}
               />
-              <Typography variant="h2" sx={{ mb: 3 }}>
+              <Typography 
+                variant="h2" 
+                sx={{ 
+                  mb: 3,
+                  fontSize: { xs: '1.8rem', sm: '2.2rem', md: '3rem' },
+                  lineHeight: { xs: 1.2, md: 1.1 }
+                }}
+              >
                 Digital Solutions for Modern Corps Members
               </Typography>
-              <Typography variant="h6" color="text.secondary" sx={{ maxWidth: 600, mx: 'auto' }}>
+              <Typography 
+                variant="h6" 
+                color="text.secondary" 
+                sx={{ 
+                  maxWidth: 600, 
+                  mx: 'auto',
+                  fontSize: { xs: '1rem', sm: '1.1rem', md: '1.25rem' },
+                  px: { xs: 2, md: 0 }
+                }}
+              >
                 Experience the future of NYSC with our comprehensive digital platform designed specifically for Muslim Corps Members
               </Typography>
             </Box>
           </Fade>
           
-          <Grid container spacing={4}>
+          <Grid container spacing={{ xs: 2, sm: 3, md: 4 }}>
             {features.map((feature, index) => (
               <Grid xs={12} md={6} key={index}>
                 <Zoom in={isVisible} timeout={1000 + index * 200}>
@@ -637,104 +632,6 @@ const HomePage: React.FC = () => {
         </Container>
       </Box>
 
-      {/* Testimonials Section */}
-      <Box sx={{ py: 8, background: theme.palette.background.paper }}>
-        <Container maxWidth="lg">
-          <Fade in={isVisible} timeout={1000}>
-            <Box sx={{ textAlign: 'center', mb: 6 }}>
-              <Typography variant="h2" sx={{ mb: 3 }}>
-                What Our Members Say
-              </Typography>
-              <Typography variant="h6" color="text.secondary" sx={{ maxWidth: 600, mx: 'auto' }}>
-                Hear from Muslim Corps Members who have experienced the MCAN difference
-              </Typography>
-            </Box>
-          </Fade>
-          
-          <Grid container spacing={4}>
-            {testimonials.slice(0, 3).map((testimonial, index) => (
-              <Grid xs={12} md={4} key={index}>
-                <Slide direction="up" in={isVisible} timeout={1000 + index * 200}>
-                  <Card
-                    sx={{
-                      p: 3,
-                      height: '100%',
-                      background: theme.palette.mode === 'dark'
-                        ? 'linear-gradient(145deg, #1A1A1A 0%, #2A2A2A 100%)'
-                        : 'linear-gradient(145deg, #FFFFFF 0%, #FAFAFA 100%)',
-                      border: '1px solid rgba(0, 0, 0, 0.05)',
-                      transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
-                      '&:hover': {
-                        transform: 'translateY(-4px)',
-                        boxShadow: '0 16px 32px rgba(0, 0, 0, 0.1)',
-                      },
-                    }}
-                  >
-                    <CardContent>
-                      <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', mb: 2 }}>
-                        <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                          {[...Array(testimonial.rating)].map((_, i) => (
-                            <Star key={i} sx={{ color: '#FFD700', fontSize: 20 }} />
-                          ))}
-                        </Box>
-                        <Chip 
-                          label={testimonial.year} 
-                          size="small" 
-                          color="primary" 
-                          variant="outlined"
-                        />
-                      </Box>
-                      
-                      <Typography variant="body1" sx={{ mb: 3, fontStyle: 'italic', lineHeight: 1.6 }}>
-                        "{testimonial.content}"
-                      </Typography>
-                      
-                      <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                        <Avatar sx={{ bgcolor: 'primary.main', mr: 2 }}>
-                          {testimonial.avatar}
-                        </Avatar>
-                        <Box>
-                          <Typography variant="subtitle1" sx={{ fontWeight: 600 }}>
-                            {testimonial.name}
-                          </Typography>
-                          <Typography variant="body2" color="text.secondary">
-                            {testimonial.role}
-                          </Typography>
-                        </Box>
-                      </Box>
-                    </CardContent>
-                  </Card>
-                </Slide>
-              </Grid>
-            ))}
-          </Grid>
-          
-          {/* View More Testimonials Button */}
-          <Box sx={{ textAlign: 'center', mt: 4 }}>
-            <Button
-              variant="outlined"
-              size="large"
-              onClick={() => navigate('/testimonials')}
-              sx={{
-                px: 4,
-                py: 1.5,
-                fontSize: '1.1rem',
-                fontWeight: 600,
-                borderRadius: 3,
-                borderColor: 'primary.main',
-                color: 'primary.main',
-                '&:hover': {
-                  backgroundColor: 'primary.main',
-                  color: 'white',
-                  transform: 'translateY(-2px)',
-                },
-              }}
-            >
-              View More Success Stories
-            </Button>
-          </Box>
-        </Container>
-      </Box>
 
       {/* CTA Section */}
       <Box
