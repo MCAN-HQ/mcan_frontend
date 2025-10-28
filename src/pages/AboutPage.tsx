@@ -1,7 +1,6 @@
 import React from 'react';
-import { Container, Typography, Box, Grid, Card, CardContent, Chip, Button, Divider, Stack, Accordion, AccordionSummary, AccordionDetails } from '@mui/material';
+import { Container, Typography, Box, Grid, Card, CardContent, Chip, Button, Divider, Stack } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import mcanLogo from '../assets/mcanlogo.jpg';
 
 const StatCard: React.FC<{ label: string; value: string }> = ({ label, value }) => (
