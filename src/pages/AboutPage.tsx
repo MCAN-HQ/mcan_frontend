@@ -28,7 +28,7 @@ const AboutPage: React.FC = () => {
     <Box>
       {/* Hero */}
       <Box className="islamic-pattern" sx={{ bgcolor: 'var(--mcan-background)', pt: { xs: 6, md: 12 }, pb: { xs: 4, md: 10 } }}>
-        <Container maxWidth="lg" sx={{ px: { xs: 1, sm: 2 } }}>
+        <Container maxWidth="lg" sx={{ px: { xs: 1, sm: 2, md: 4, lg: 6 } }}>
           <Grid container spacing={{ xs: 2, md: 4 }} alignItems="center">
             <Grid xs={12} md={6}>
               <Chip label="About MCAN" color="primary" sx={{ fontWeight: 700, mb: { xs: 1, md: 2 }, fontSize: { xs: '0.8rem', sm: '0.9rem' } }} />
@@ -88,7 +88,7 @@ const AboutPage: React.FC = () => {
       </Box>
 
       {/* Motto & Slogan */}
-      <Container maxWidth="lg" sx={{ py: { xs: 6, md: 8 } }}>
+      <Container maxWidth="lg" sx={{ py: { xs: 6, md: 8 }, px: { xs: 2, sm: 3, md: 4, lg: 6 } }}>
         <SectionHeading title="Motto & Slogan" subtitle="Our guiding principles" />
         <Grid container spacing={3}>
           <Grid xs={12} md={6}>
@@ -120,7 +120,7 @@ const AboutPage: React.FC = () => {
       <Divider />
 
       {/* Registered Office */}
-      <Container maxWidth="lg" sx={{ py: { xs: 6, md: 8 } }}>
+      <Container maxWidth="lg" sx={{ py: { xs: 6, md: 8 }, px: { xs: 2, sm: 3, md: 4, lg: 6 } }}>
         <SectionHeading title="Registered Office" subtitle="Our headquarters and administrative structure" />
         <Grid container spacing={3}>
           <Grid xs={12} md={4}>
@@ -159,7 +159,7 @@ const AboutPage: React.FC = () => {
       <Divider />
 
       {/* Aim and Objectives */}
-      <Container maxWidth="lg" sx={{ py: { xs: 6, md: 8 } }}>
+      <Container maxWidth="lg" sx={{ py: { xs: 6, md: 8 }, px: { xs: 2, sm: 3, md: 4, lg: 6 } }}>
         <SectionHeading title="Aim and Objectives" subtitle="What we are organized to achieve" />
         <Grid container spacing={3}>
           <Grid xs={12} md={6}>
@@ -204,7 +204,7 @@ const AboutPage: React.FC = () => {
       <Divider />
 
       {/* Achievements */}
-      <Container maxWidth="lg" sx={{ py: { xs: 6, md: 8 } }}>
+      <Container maxWidth="lg" sx={{ py: { xs: 6, md: 8 }, px: { xs: 2, sm: 3, md: 4, lg: 6 } }}>
         <SectionHeading title="Our Achievements" subtitle="Alhamdulillah, since our assumption to office on 15th of March 2025" />
         <Grid container spacing={3}>
           <Grid xs={12} md={6}>
@@ -265,7 +265,7 @@ const AboutPage: React.FC = () => {
       <Divider />
 
       {/* Organizational Structure */}
-      <Container maxWidth="lg" sx={{ py: { xs: 6, md: 8 } }}>
+      <Container maxWidth="lg" sx={{ py: { xs: 6, md: 8 }, px: { xs: 2, sm: 3, md: 4, lg: 6 } }}>
         <SectionHeading title="Organizational Structure" subtitle="Our administrative hierarchy" />
         <Grid container spacing={3}>
           <Grid xs={12} md={6}>
@@ -329,7 +329,7 @@ const AboutPage: React.FC = () => {
       <Divider />
 
       {/* Programs */}
-      <Container maxWidth="lg" sx={{ py: { xs: 6, md: 8 } }}>
+      <Container maxWidth="lg" sx={{ py: { xs: 6, md: 8 }, px: { xs: 2, sm: 3, md: 4, lg: 6 } }}>
         <SectionHeading title="Programs" subtitle="Aligned with the NYSC calendar for maximum impact" />
         <Grid container spacing={3}>
           <Grid xs={12} md={4}>
@@ -377,7 +377,7 @@ const AboutPage: React.FC = () => {
       <Divider />
 
       {/* Annual Programs */}
-      <Container maxWidth="lg" sx={{ py: { xs: 6, md: 8 } }}>
+      <Container maxWidth="lg" sx={{ py: { xs: 6, md: 8 }, px: { xs: 2, sm: 3, md: 4, lg: 6 } }}>
         <SectionHeading title="Annual Programs" subtitle="Major events and activities" />
         <Grid container spacing={3}>
           <Grid xs={12} md={6}>
@@ -405,7 +405,7 @@ const AboutPage: React.FC = () => {
 
       {/* Call to Action */}
       <Box sx={{ bgcolor: 'primary.dark', color: 'white', py: { xs: 6, md: 8 } }}>
-        <Container maxWidth="lg">
+        <Container maxWidth="lg" sx={{ px: { xs: 2, sm: 3, md: 4, lg: 6 } }}>
           <Grid container spacing={3} alignItems="center">
             <Grid xs={12} md={8}>
               <Typography variant="h4" sx={{ fontWeight: 900, mb: 1 }}>Join MCAN</Typography>

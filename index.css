@@ -181,6 +181,28 @@ html, body, #root {
   max-width: 100%;
 }
 
+/* Desktop spacing improvements */
+@media (min-width: 1200px) {
+  .MuiContainer-root {
+    padding-left: 48px !important;
+    padding-right: 48px !important;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .MuiContainer-root {
+    padding-left: 32px !important;
+    padding-right: 32px !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .MuiContainer-root {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+}
+
 /* Ensure proper spacing on all screen sizes */
 @media (max-width: 600px) {
   .MuiContainer-root {

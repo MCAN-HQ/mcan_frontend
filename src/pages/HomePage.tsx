@@ -197,11 +197,11 @@ const HomePage: React.FC = () => {
           }}
         />
         
-        <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 2, px: { xs: 1, sm: 2, md: 3 } }}>
+        <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 2, px: { xs: 1, sm: 2, md: 4, lg: 6 } }}>
           <Grid container spacing={{ xs: 2, md: 4 }} alignItems="center">
             <Grid xs={12} md={6} sx={{ order: { xs: 2, md: 1 } }}>
               <Fade in={isVisible} timeout={1000}>
-                <Box sx={{ px: { xs: 1, sm: 0 } }}>
+                <Box sx={{ px: { xs: 1, sm: 0 }, maxWidth: { md: '90%', lg: '85%' } }}>
                   <Chip
                     label="Serving Islam Through the Nation"
                     sx={{
@@ -364,7 +364,7 @@ const HomePage: React.FC = () => {
 
       {/* Stats Section */}
       <Box sx={{ py: { xs: 4, md: 8 }, background: theme.palette.background.default }}>
-        <Container maxWidth="lg" sx={{ px: { xs: 2, sm: 3 } }}>
+        <Container maxWidth="lg" sx={{ px: { xs: 2, sm: 3, md: 4, lg: 6 } }}>
           <Fade in={isVisible} timeout={1000}>
             <Box sx={{ textAlign: 'center', mb: { xs: 4, md: 6 } }}>
               <Typography 
@@ -462,7 +462,7 @@ const HomePage: React.FC = () => {
 
       {/* Features Section */}
       <Box sx={{ py: { xs: 4, md: 8 }, background: theme.palette.background.paper }}>
-        <Container maxWidth="lg" sx={{ px: { xs: 2, sm: 3 } }}>
+        <Container maxWidth="lg" sx={{ px: { xs: 2, sm: 3, md: 4, lg: 6 } }}>
           <Fade in={isVisible} timeout={1000}>
             <Box sx={{ textAlign: 'center', mb: { xs: 4, md: 8 } }}>
               <Chip
@@ -564,7 +564,7 @@ const HomePage: React.FC = () => {
 
       {/* Services Section */}
       <Box sx={{ py: 8, background: theme.palette.background.default }}>
-        <Container maxWidth="lg">
+        <Container maxWidth="lg" sx={{ px: { xs: 2, sm: 3, md: 4, lg: 6 } }}>
           <Fade in={isVisible} timeout={1000}>
             <Box sx={{ textAlign: 'center', mb: 6 }}>
               <Typography variant="h2" sx={{ mb: 3 }}>
@@ -645,7 +645,7 @@ const HomePage: React.FC = () => {
           py: 8,
         }}
       >
-        <Container maxWidth="lg">
+        <Container maxWidth="lg" sx={{ px: { xs: 2, sm: 3, md: 4, lg: 6 } }}>
           <Fade in={isVisible} timeout={1000}>
             <Box sx={{ textAlign: 'center' }}>
               <Typography variant="h2" sx={{ mb: 3, fontWeight: 800 }}>
