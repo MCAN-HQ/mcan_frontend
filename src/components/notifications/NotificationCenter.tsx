@@ -59,15 +59,16 @@ const NotificationCenter: React.FC<NotificationCenterProps> = ({ open, onClose }
       read: false,
       actionUrl: '/payments',
     },
-    {
-      id: '2',
-      title: 'Prayer Time Reminder',
-      message: 'Dhuhr prayer time is in 15 minutes.',
-      type: 'info',
-      timestamp: new Date(Date.now() - 1000 * 60 * 60 * 2), // 2 hours ago
-      read: false,
-      actionUrl: '/prayer-times',
-    },
+    // Reserved for future reactivation
+    // {
+    //   id: '2',
+    //   title: 'Prayer Time Reminder',
+    //   message: 'Dhuhr prayer time is in 15 minutes.',
+    //   type: 'info',
+    //   timestamp: new Date(Date.now() - 1000 * 60 * 60 * 2), // 2 hours ago
+    //   read: false,
+    //   actionUrl: '/prayer-times',
+    // },
     {
       id: '3',
       title: 'Profile Update Required',

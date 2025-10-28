@@ -21,10 +21,11 @@ import ResetPasswordPage from './src/pages/auth/ResetPasswordPage';
 import AdminDashboard from './src/pages/admin/AdminDashboard';
 import DashboardPage from './src/pages/dashboard/DashboardPage';
 import ProfilePage from './src/pages/dashboard/ProfilePage';
-import PrayerTimesPage from './src/pages/PrayerTimesPage';
+// Reserved for future reactivation
+// import PrayerTimesPage from './src/pages/PrayerTimesPage';
 import NotFoundPage from './src/pages/NotFoundPage';
 import EIDPage from './src/pages/dashboard/EIDPage';
-import IslamicResourcesPage from './src/pages/IslamicResourcesPage';
+// import IslamicResourcesPage from './src/pages/IslamicResourcesPage';
 
 // Protected Route Component
 import ProtectedRoute from './src/components/auth/ProtectedRoute';
@@ -53,8 +54,9 @@ const AppContent: React.FC = () => {
           <Route path="/services/properties" element={<PropertyManagementPage />} />
           <Route path="/states" element={<StatesPage />} />
           <Route path="/contact" element={<ContactPage />} />
-          <Route path="/prayer-times" element={<PrayerTimesPage />} />
-          <Route path="/islamic-resources" element={<IslamicResourcesPage />} />
+          {/* Reserved for future reactivation */}
+          {/* <Route path="/prayer-times" element={<PrayerTimesPage />} /> */}
+          {/* <Route path="/islamic-resources" element={<IslamicResourcesPage />} /> */}
           
           {/* Authentication Routes */}
           <Route 

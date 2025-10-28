@@ -36,7 +36,7 @@ const Footer: React.FC = () => {
     { label: 'Payment System', path: '/services' },
     { label: 'Property Management', path: '/services' },
     { label: 'Support Marketplace', path: '/services' },
-    { label: 'Islamic Resources', path: '/prayer-times' },
+    // { label: 'Islamic Resources', path: '/prayer-times' }, // Reserved for future reactivation
   ];
 
   const socialLinks = [

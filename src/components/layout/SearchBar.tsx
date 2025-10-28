@@ -19,7 +19,7 @@ import {
   Clear,
   Person,
   Business,
-  LocationOn,
+  // LocationOn, // Reserved for future reactivation
   Payment,
   School,
 } from '@mui/icons-material';
@@ -82,14 +82,15 @@ const SearchBar: React.FC<SearchBarProps> = ({
       url: '/services',
       icon: <School />,
     },
-    {
-      id: '5',
-      title: 'Prayer Times',
-      description: 'Daily prayer schedule',
-      type: 'page',
-      url: '/prayer-times',
-      icon: <LocationOn />,
-    },
+    // Reserved for future reactivation
+    // {
+    //   id: '5',
+    //   title: 'Prayer Times',
+    //   description: 'Daily prayer schedule',
+    //   type: 'page',
+    //   url: '/prayer-times',
+    //   icon: <LocationOn />,
+    // },
   ], []);
 
   useEffect(() => {

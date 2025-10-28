@@ -30,8 +30,8 @@ import {
   Business,
   LocationOn,
   ContactMail,
-  AccessTime,
-  MenuBook,
+  // AccessTime, // Reserved for future reactivation
+  // MenuBook, // Reserved for future reactivation
 } from '@mui/icons-material';
 import mcanLogo from '../../assets/mcanlogo.jpg';
 import { useNavigate, useLocation } from 'react-router-dom';
@@ -80,8 +80,8 @@ const Navbar: React.FC = () => {
     { label: 'Membership', path: '/membership', icon: <People /> },
     { label: 'Services', path: '/services', icon: <Business /> },
     { label: 'States', path: '/states', icon: <LocationOn /> },
-    { label: 'Prayer Times', path: '/prayer-times', icon: <AccessTime /> },
-    { label: 'Islamic Resources', path: '/islamic-resources', icon: <MenuBook /> },
+    // { label: 'Prayer Times', path: '/prayer-times', icon: <AccessTime /> }, // Reserved for future reactivation
+    // { label: 'Islamic Resources', path: '/islamic-resources', icon: <MenuBook /> }, // Reserved for future reactivation
     { label: 'Contact', path: '/contact', icon: <ContactMail /> },
   ];
 
