@@ -197,30 +197,30 @@ const HomePage: React.FC = () => {
           }}
         />
         
-        <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 2, px: { xs: 2, sm: 3 } }}>
-          <Grid container spacing={{ xs: 3, md: 4 }} alignItems="center">
+        <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 2, px: { xs: 1, sm: 2, md: 3 } }}>
+          <Grid container spacing={{ xs: 2, md: 4 }} alignItems="center">
             <Grid xs={12} md={6} sx={{ order: { xs: 2, md: 1 } }}>
               <Fade in={isVisible} timeout={1000}>
-                <Box>
+                <Box sx={{ px: { xs: 1, sm: 0 } }}>
                   <Chip
                     label="Serving Islam Through the Nation"
                     sx={{
                       background: 'rgba(255, 255, 255, 0.15)',
                       color: 'white',
                       fontWeight: 600,
-                      mb: 4,
+                      mb: { xs: 2, md: 4 },
                       backdropFilter: 'blur(10px)',
                       border: '1px solid rgba(255, 255, 255, 0.2)',
-                      fontSize: '0.9rem',
-                      px: 2,
-                      py: 1,
+                      fontSize: { xs: '0.8rem', sm: '0.9rem' },
+                      px: { xs: 1.5, sm: 2 },
+                      py: { xs: 0.5, sm: 1 },
                     }}
                   />
                   
                   <Typography
                     variant="h1"
                     sx={{
-                      fontSize: { xs: '1.8rem', sm: '2.2rem', md: '3.5rem', lg: '4.5rem' },
+                      fontSize: { xs: '1.4rem', sm: '1.8rem', md: '2.5rem', lg: '3.5rem' },
                       fontWeight: 900,
                       lineHeight: { xs: 1.2, md: 1.1 },
                       mb: { xs: 2, md: 4 },
@@ -231,6 +231,7 @@ const HomePage: React.FC = () => {
                       textShadow: '0 4px 8px rgba(0,0,0,0.1)',
                       letterSpacing: '-0.02em',
                       textAlign: { xs: 'center', md: 'left' },
+                      px: { xs: 1, sm: 0 }
                     }}
                   >
                     Muslim Corpers Association of Nigeria
@@ -239,14 +240,14 @@ const HomePage: React.FC = () => {
                   <Typography
                     variant="h5"
                     sx={{
-                      mb: { xs: 3, md: 5 },
+                      mb: { xs: 2, md: 4 },
                       opacity: 0.95,
                       fontWeight: 400,
-                      lineHeight: { xs: 1.5, md: 1.7 },
-                      fontSize: { xs: '1rem', sm: '1.1rem', md: '1.3rem' },
+                      lineHeight: { xs: 1.4, md: 1.6 },
+                      fontSize: { xs: '0.9rem', sm: '1rem', md: '1.2rem' },
                       maxWidth: { xs: '100%', md: '90%' },
                       textAlign: { xs: 'center', md: 'left' },
-                      px: { xs: 2, md: 0 },
+                      px: { xs: 1, md: 0 },
                     }}
                   >
                     A religious body under the National Youth Service Corps (NYSC) Scheme established in 1978, 
@@ -255,10 +256,11 @@ const HomePage: React.FC = () => {
                   
                   <Stack 
                     direction={{ xs: 'column', sm: 'row' }} 
-                    spacing={{ xs: 2, sm: 3 }}
+                    spacing={{ xs: 1.5, sm: 2 }}
                     sx={{ 
                       width: { xs: '100%', sm: 'auto' },
-                      alignItems: { xs: 'center', sm: 'flex-start' }
+                      alignItems: { xs: 'center', sm: 'flex-start' },
+                      px: { xs: 1, sm: 0 }
                     }}
                   >
                     <Button
@@ -269,20 +271,20 @@ const HomePage: React.FC = () => {
                       sx={{
                         background: 'linear-gradient(135deg, #FF8F00 0%, #FFB74D 100%)',
                         color: 'white',
-                        px: { xs: 4, sm: 5 },
-                        py: { xs: 1.5, sm: 2 },
-                        fontSize: { xs: '1rem', sm: '1.2rem' },
+                        px: { xs: 3, sm: 4 },
+                        py: { xs: 1.2, sm: 1.5 },
+                        fontSize: { xs: '0.9rem', sm: '1rem' },
                         fontWeight: 700,
-                        borderRadius: 4,
-                        boxShadow: '0 8px 25px rgba(255, 143, 0, 0.3)',
+                        borderRadius: 3,
+                        boxShadow: '0 6px 20px rgba(255, 143, 0, 0.3)',
                         textTransform: 'none',
                         transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
-                        minHeight: { xs: 48, sm: 56 },
+                        minHeight: { xs: 44, sm: 48 },
                         width: { xs: '100%', sm: 'auto' },
                         '&:hover': {
                           background: 'linear-gradient(135deg, #E65100 0%, #FF9800 100%)',
-                          transform: 'translateY(-3px)',
-                          boxShadow: '0 12px 35px rgba(255, 143, 0, 0.4)',
+                          transform: 'translateY(-2px)',
+                          boxShadow: '0 8px 25px rgba(255, 143, 0, 0.4)',
                         },
                       }}
                     >
@@ -297,22 +299,22 @@ const HomePage: React.FC = () => {
                       sx={{
                         borderColor: 'rgba(255, 255, 255, 0.6)',
                         color: 'white',
-                        px: { xs: 4, sm: 5 },
-                        py: { xs: 1.5, sm: 2 },
-                        fontSize: { xs: '1rem', sm: '1.2rem' },
+                        px: { xs: 3, sm: 4 },
+                        py: { xs: 1.2, sm: 1.5 },
+                        fontSize: { xs: '0.9rem', sm: '1rem' },
                         fontWeight: 700,
-                        borderRadius: 4,
+                        borderRadius: 3,
                         backdropFilter: 'blur(10px)',
                         backgroundColor: 'rgba(255, 255, 255, 0.05)',
                         textTransform: 'none',
                         transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
-                        minHeight: { xs: 48, sm: 56 },
+                        minHeight: { xs: 44, sm: 48 },
                         width: { xs: '100%', sm: 'auto' },
                         '&:hover': {
                           borderColor: 'white',
                           background: 'rgba(255, 255, 255, 0.15)',
-                          transform: 'translateY(-3px)',
-                          boxShadow: '0 8px 25px rgba(255, 255, 255, 0.2)',
+                          transform: 'translateY(-2px)',
+                          boxShadow: '0 6px 20px rgba(255, 255, 255, 0.2)',
                         },
                       }}
                     >

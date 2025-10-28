@@ -192,7 +192,7 @@ const Navbar: React.FC = () => {
           boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
         }}
       >
-        <Toolbar sx={{ py: { xs: 0.5, sm: 1 }, minHeight: { xs: 56, sm: 64 } }}>
+        <Toolbar sx={{ py: { xs: 0.5, sm: 1 }, minHeight: { xs: 56, sm: 64 }, px: { xs: 1, sm: 2 } }}>
           {/* Mobile menu button */}
           {isMobile && (
             <IconButton
@@ -201,13 +201,13 @@ const Navbar: React.FC = () => {
               aria-label="menu"
               onClick={handleMobileToggle}
               sx={{ 
-                mr: 2,
-                minWidth: 44,
-                minHeight: 44,
-                p: 1
+                mr: 1,
+                minWidth: 48,
+                minHeight: 48,
+                p: 1.5
               }}
             >
-              <MenuIcon />
+              <MenuIcon sx={{ fontSize: 24 }} />
             </IconButton>
           )}
 
@@ -217,8 +217,9 @@ const Navbar: React.FC = () => {
               display: 'flex',
               alignItems: 'center',
               cursor: 'pointer',
-              mr: { xs: 2, sm: 4 },
-              flex: { xs: 1, sm: 'none' }
+              mr: { xs: 1, sm: 4 },
+              flex: { xs: 1, sm: 'none' },
+              minWidth: 0
             }}
             onClick={() => navigate('/')}
           >
@@ -227,14 +228,15 @@ const Navbar: React.FC = () => {
               src={mcanLogo}
               alt="MCAN Logo"
               sx={{
-                height: { xs: 32, sm: 40 },
+                height: { xs: 28, sm: 40 },
                 width: 'auto',
-                mr: { xs: 1, sm: 2 },
+                mr: { xs: 0.5, sm: 2 },
                 borderRadius: 1,
                 boxShadow: '0 2px 4px rgba(0,0,0,0.2)',
+                flexShrink: 0
               }}
             />
-            <Box>
+            <Box sx={{ minWidth: 0, flex: 1 }}>
               <Typography
                 variant="h5"
                 component="div"
@@ -244,7 +246,10 @@ const Navbar: React.FC = () => {
                   textShadow: '0 2px 4px rgba(0,0,0,0.3)',
                   lineHeight: 1,
                   letterSpacing: '0.5px',
-                  fontSize: { xs: '1.1rem', sm: '1.5rem' }
+                  fontSize: { xs: '1rem', sm: '1.5rem' },
+                  overflow: 'hidden',
+                  textOverflow: 'ellipsis',
+                  whiteSpace: 'nowrap'
                 }}
               >
                 MCAN
@@ -300,7 +305,7 @@ const Navbar: React.FC = () => {
           )}
 
           {/* User Menu */}
-          <Box sx={{ display: 'flex', alignItems: 'center', gap: { xs: 1, sm: 2 } }}>
+          <Box sx={{ display: 'flex', alignItems: 'center', gap: { xs: 0.5, sm: 2 }, flexShrink: 0 }}>
             <DarkModeToggle />
             {isAuthenticated && <NotificationBell />}
             {isAuthenticated ? (
@@ -321,15 +326,15 @@ const Navbar: React.FC = () => {
                   onClick={handleMenuOpen}
                   color="inherit"
                   sx={{
-                    minWidth: 44,
-                    minHeight: 44,
-                    p: 1
+                    minWidth: 48,
+                    minHeight: 48,
+                    p: 1.5
                   }}
                 >
                   <Avatar
                     sx={{
-                      width: { xs: 28, sm: 32 },
-                      height: { xs: 28, sm: 32 },
+                      width: { xs: 32, sm: 36 },
+                      height: { xs: 32, sm: 36 },
                       bgcolor: 'secondary.main',
                       color: 'white',
                     }}
@@ -377,11 +382,12 @@ const Navbar: React.FC = () => {
                   sx={{
                     border: '1px solid rgba(255,255,255,0.3)',
                     borderRadius: 2,
-                    px: { xs: 2, sm: 3 },
-                    py: { xs: 0.5, sm: 1 },
+                    px: { xs: 1.5, sm: 3 },
+                    py: { xs: 1, sm: 1 },
                     fontWeight: 600,
-                    fontSize: { xs: '0.8rem', sm: '0.875rem' },
-                    minHeight: { xs: 36, sm: 40 },
+                    fontSize: { xs: '0.75rem', sm: '0.875rem' },
+                    minHeight: { xs: 40, sm: 40 },
+                    minWidth: { xs: 60, sm: 'auto' },
                     transition: 'all 0.3s ease',
                     '&:hover': {
                       backgroundColor: 'rgba(255,255,255,0.15)',
@@ -398,11 +404,12 @@ const Navbar: React.FC = () => {
                   sx={{
                     backgroundColor: 'rgba(255,255,255,0.15)',
                     borderRadius: 2,
-                    px: { xs: 2, sm: 3 },
-                    py: { xs: 0.5, sm: 1 },
+                    px: { xs: 1.5, sm: 3 },
+                    py: { xs: 1, sm: 1 },
                     fontWeight: 600,
-                    fontSize: { xs: '0.8rem', sm: '0.875rem' },
-                    minHeight: { xs: 36, sm: 40 },
+                    fontSize: { xs: '0.75rem', sm: '0.875rem' },
+                    minHeight: { xs: 40, sm: 40 },
+                    minWidth: { xs: 60, sm: 'auto' },
                     backdropFilter: 'blur(10px)',
                     border: '1px solid rgba(255,255,255,0.2)',
                     transition: 'all 0.3s ease',

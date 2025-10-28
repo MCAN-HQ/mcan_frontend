@@ -28,22 +28,46 @@ const AboutPage: React.FC = () => {
   return (
     <Box>
       {/* Hero */}
-      <Box className="islamic-pattern" sx={{ bgcolor: 'var(--mcan-background)', pt: { xs: 8, md: 12 }, pb: { xs: 6, md: 10 } }}>
-        <Container maxWidth="lg">
-          <Grid container spacing={4} alignItems="center">
+      <Box className="islamic-pattern" sx={{ bgcolor: 'var(--mcan-background)', pt: { xs: 6, md: 12 }, pb: { xs: 4, md: 10 } }}>
+        <Container maxWidth="lg" sx={{ px: { xs: 1, sm: 2 } }}>
+          <Grid container spacing={{ xs: 2, md: 4 }} alignItems="center">
             <Grid xs={12} md={6}>
-              <Chip label="About MCAN" color="primary" sx={{ fontWeight: 700, mb: 2 }} />
-              <Typography variant="h2" sx={{ fontWeight: 900, lineHeight: 1.1, color: 'primary.dark', mb: 2 }}>
+              <Chip label="About MCAN" color="primary" sx={{ fontWeight: 700, mb: { xs: 1, md: 2 }, fontSize: { xs: '0.8rem', sm: '0.9rem' } }} />
+              <Typography variant="h2" sx={{ fontWeight: 900, lineHeight: { xs: 1.2, md: 1.1 }, color: 'primary.dark', mb: { xs: 1, md: 2 }, fontSize: { xs: '1.4rem', sm: '1.8rem', md: '2.5rem' } }}>
                 MUSLIM CORPERS ASSOCIATION OF NIGERIA (MCAN)
               </Typography>
-              <Typography variant="h6" color="text.secondary" sx={{ mb: 3 }}>
+              <Typography variant="h6" color="text.secondary" sx={{ mb: { xs: 2, md: 3 }, fontSize: { xs: '0.9rem', sm: '1rem', md: '1.1rem' }, lineHeight: { xs: 1.4, md: 1.6 } }}>
                 Muslim Corpers Association of Nigeria (MCAN) as the acronym implies is a religious body under the National Youth Service Corps (NYSC) Scheme established in 1978, registered with the Corporate Affairs Commission (CAC) since 1994 and affiliated with the Nigeria Supreme Council for Islamic Affairs (NSCIA) since 2018, a sister body to other Muslim Organisations across the Federation.
               </Typography>
-              <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>
-                <Button component={RouterLink} to="/register" size="large" variant="contained" color="primary">
+              <Stack direction={{ xs: 'column', sm: 'row' }} spacing={{ xs: 1.5, sm: 2 }}>
+                <Button 
+                  component={RouterLink} 
+                  to="/register" 
+                  size="large" 
+                  variant="contained" 
+                  color="primary"
+                  sx={{
+                    minHeight: { xs: 44, sm: 48 },
+                    fontSize: { xs: '0.9rem', sm: '1rem' },
+                    px: { xs: 2, sm: 3 },
+                    py: { xs: 1, sm: 1.5 }
+                  }}
+                >
                   Register
                 </Button>
-                <Button component={RouterLink} to="/services" size="large" variant="outlined" color="primary">
+                <Button 
+                  component={RouterLink} 
+                  to="/services" 
+                  size="large" 
+                  variant="outlined" 
+                  color="primary"
+                  sx={{
+                    minHeight: { xs: 44, sm: 48 },
+                    fontSize: { xs: '0.9rem', sm: '1rem' },
+                    px: { xs: 2, sm: 3 },
+                    py: { xs: 1, sm: 1.5 }
+                  }}
+                >
                   Explore Programs
                 </Button>
               </Stack>
