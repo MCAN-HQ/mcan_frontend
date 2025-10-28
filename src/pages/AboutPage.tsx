@@ -1,6 +1,7 @@
 import React from 'react';
-import { Container, Typography, Box, Grid, Card, CardContent, Chip, Button, Divider, Stack } from '@mui/material';
+import { Container, Typography, Box, Grid, Card, CardContent, Chip, Button, Divider, Stack, Accordion, AccordionSummary, AccordionDetails } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import mcanLogo from '../assets/mcanlogo.jpg';
 
 const StatCard: React.FC<{ label: string; value: string }> = ({ label, value }) => (
@@ -33,10 +34,10 @@ const AboutPage: React.FC = () => {
             <Grid xs={12} md={6}>
               <Chip label="About MCAN" color="primary" sx={{ fontWeight: 700, mb: 2 }} />
               <Typography variant="h2" sx={{ fontWeight: 900, lineHeight: 1.1, color: 'primary.dark', mb: 2 }}>
-                Muslim Corpers' Association of Nigeria
+                MUSLIM CORPERS ASSOCIATION OF NIGERIA (MCAN)
               </Typography>
               <Typography variant="h6" color="text.secondary" sx={{ mb: 3 }}>
-                A national body fostering a strong network of Muslim youth corps members across Nigeria since 1978/1979; officially registered with the Corporate Affairs Commission (CAC) in 1994. National headquarters: Mabushi, Abuja; branches in all 36 states and the FCT.
+                Muslim Corpers Association of Nigeria (MCAN) as the acronym implies is a religious body under the National Youth Service Corps (NYSC) Scheme established in 1978, registered with the Corporate Affairs Commission (CAC) since 1994 and affiliated with the Nigeria Supreme Council for Islamic Affairs (NSCIA) since 2018, a sister body to other Muslim Organisations across the Federation.
               </Typography>
               <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>
                 <Button component={RouterLink} to="/register" size="large" variant="contained" color="primary">
@@ -56,45 +57,36 @@ const AboutPage: React.FC = () => {
             </Grid>
           </Grid>
           <Grid container spacing={2} sx={{ mt: 4 }}>
-            <Grid xs={12} sm={4}><StatCard label="Years of Service" value="45+" /></Grid>
+            <Grid xs={12} sm={4}><StatCard label="Years of Service" value="47+" /></Grid>
             <Grid xs={12} sm={4}><StatCard label="States & FCT" value="37" /></Grid>
-            <Grid xs={12} sm={4}><StatCard label="National Chapters" value="Nationwide" /></Grid>
-            <Grid item xs={12} sm={4}><StatCard label="States & FCT" value="37" /></Grid>
-            <Grid item xs={12} sm={4}><StatCard label="National Chapters" value="Nationwide" /></Grid>
+            <Grid xs={12} sm={4}><StatCard label="Annual Members" value="178,000+" /></Grid>
           </Grid>
         </Container>
       </Box>
 
-      {/* Mission / Vision / Slogan */}
+      {/* Motto & Slogan */}
       <Container maxWidth="lg" sx={{ py: { xs: 6, md: 8 } }}>
-        <SectionHeading title="Our Core Direction" subtitle="Mission, Vision and Slogan" />
+        <SectionHeading title="Motto & Slogan" subtitle="Our guiding principles" />
         <Grid container spacing={3}>
-          <Grid xs={12} md={4}>
+          <Grid xs={12} md={6}>
             <Card sx={{ height: '100%', borderTop: '4px solid', borderColor: 'primary.main' }}>
               <CardContent>
-                <Typography variant="h5" sx={{ fontWeight: 800, mb: 1 }}>Mission</Typography>
-                <Typography color="text.secondary">
-                  Adherence to the pristine teachings of Islam in all affairs of life.
+                <Typography variant="h5" sx={{ fontWeight: 800, mb: 2 }}>Motto</Typography>
+                <Typography color="text.secondary" sx={{ fontStyle: 'italic', mb: 2 }}>
+                  "SAY: TRULY, MY PRAYER, AND MY SERVICE OF SACRIFICE, MY LIFE AND MY DEATH, ARE (ALL) FOR ALLAH, THE CHERISHER OF THE WORLDS"
+                </Typography>
+                <Typography variant="caption" color="text.secondary">
+                  Qur'an (Qur'an: 6/162)
                 </Typography>
               </CardContent>
             </Card>
           </Grid>
-          <Grid xs={12} md={4}>
+          <Grid xs={12} md={6}>
             <Card sx={{ height: '100%', borderTop: '4px solid', borderColor: 'primary.main' }}>
               <CardContent>
-                <Typography variant="h5" sx={{ fontWeight: 800, mb: 1 }}>Vision</Typography>
-                <Typography color="text.secondary">
-                  Towards achieving an ideal, morally bounded Islamic society.
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-          <Grid xs={12} md={4}>
-            <Card sx={{ height: '100%', borderTop: '4px solid', borderColor: 'primary.main' }}>
-              <CardContent>
-                <Typography variant="h5" sx={{ fontWeight: 800, mb: 1 }}>Slogan</Typography>
-                <Typography color="text.secondary">
-                  Serving Islam (Allah) through the Nation.
+                <Typography variant="h5" sx={{ fontWeight: 800, mb: 2 }}>Slogan</Typography>
+                <Typography color="text.secondary" sx={{ fontSize: '1.2rem', fontWeight: 600 }}>
+                  "SERVING ISLAM THROUGH THE NATION"
                 </Typography>
               </CardContent>
             </Card>
@@ -104,17 +96,170 @@ const AboutPage: React.FC = () => {
 
       <Divider />
 
-      {/* Aims and Objectives */}
+      {/* Registered Office */}
       <Container maxWidth="lg" sx={{ py: { xs: 6, md: 8 } }}>
-        <SectionHeading title="Aims and Objectives" subtitle="What we are organized to achieve" />
+        <SectionHeading title="Registered Office" subtitle="Our headquarters and administrative structure" />
+        <Grid container spacing={3}>
+          <Grid xs={12} md={4}>
+            <Card>
+              <CardContent>
+                <Typography variant="h6" sx={{ fontWeight: 800, mb: 2 }}>National Headquarters</Typography>
+                <Typography color="text.secondary">
+                  Plot 1065, NIQS Crescent, Opposite Maryam Apartment, Mabushi, FCT Abuja.
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+          <Grid xs={12} md={4}>
+            <Card>
+              <CardContent>
+                <Typography variant="h6" sx={{ fontWeight: 800, mb: 2 }}>State Branches</Typography>
+                <Typography color="text.secondary">
+                  The State Branches shall have Administrative Secretariats in their respective State Capital.
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+          <Grid xs={12} md={4}>
+            <Card>
+              <CardContent>
+                <Typography variant="h6" sx={{ fontWeight: 800, mb: 2 }}>Zonal Secretariats</Typography>
+                <Typography color="text.secondary">
+                  The Zones shall site their respective Secretariats at places where it will be administratively convenient and economically manageable within the Zone.
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+        </Grid>
+      </Container>
+
+      <Divider />
+
+      {/* Aim and Objectives */}
+      <Container maxWidth="lg" sx={{ py: { xs: 6, md: 8 } }}>
+        <SectionHeading title="Aim and Objectives" subtitle="What we are organized to achieve" />
+        <Grid container spacing={3}>
+          <Grid xs={12} md={6}>
+            <Card sx={{ height: '100%' }}>
+              <CardContent>
+                <Typography variant="h6" sx={{ fontWeight: 800, mb: 2, color: 'primary.main' }}>Aim</Typography>
+                <Typography color="text.secondary" sx={{ mb: 3 }}>
+                  Ensuring the rights and welfare of all Muslim corps members and their communities is ensured and protected.
+                </Typography>
+                <Typography variant="h6" sx={{ fontWeight: 800, mb: 2, color: 'primary.main' }}>Objectives</Typography>
+                <Typography component="ol" sx={{ pl: 3 }}>
+                  <li>To identify, organize, coordinate and direct the affairs of the Muslim Corps Members with a view to assisting them carry out their collective Islamic religious duties and responsibilities;</li>
+                  <li>To promote members' pursuit of Islamic education so as to enhance their correct understanding and practice of Islamic as a Religion and Way of Life;</li>
+                  <li>To engage in "Da'awah", i.e. Islamic propagation in both urban and rural communities and partake in general social welfare and philanthropic and activities especially in the prison yards, hospitals, remand homes and orphanages in line with the Islamic principles of charity.</li>
+                  <li>To assert and defend the rights and interests of all Muslims in Nigeria and Muslim Corps members in particular;</li>
+                  <li>To liaise and work hand-in hand with other organizations with similar aims and objectives.</li>
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+          <Grid xs={12} md={6}>
+            <Card sx={{ height: '100%' }}>
+              <CardContent>
+                <Typography variant="h6" sx={{ fontWeight: 800, mb: 2 }}>Our Challenges</Typography>
+                <Typography color="text.secondary" sx={{ mb: 2 }}>
+                  For every organisation to attain sustainability, development and ensure continuity, there are three major factors that cannot be underestimated:
+                </Typography>
+                <Typography component="ol" sx={{ pl: 3, mb: 3 }}>
+                  <li><strong>Human resources</strong> - Alhamdulillah, we have over 178,000 Muslim corps members across 36 states and the FCT annually.</li>
+                  <li><strong>Finance and economy</strong> - This has been one of our major challenges as it is hindering our activism and establishment of MCAN Mosques and Lodges, schools and Business centres across the federation.</li>
+                  <li><strong>Enabling environment</strong> - Overtime, we used to enjoy both our rights and privileges extended by the NYSC, but recently such issues have been reduced.</li>
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  As at now (after 47 years of flourishing existence), there are only 47 lodges in 28 states of the federation that are having MCAN lodges and/or mosques for Muslim corps members.
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+        </Grid>
+      </Container>
+
+      <Divider />
+
+      {/* Achievements */}
+      <Container maxWidth="lg" sx={{ py: { xs: 6, md: 8 } }}>
+        <SectionHeading title="Our Achievements" subtitle="Alhamdulillah, since our assumption to office on 15th of March 2025" />
+        <Grid container spacing={3}>
+          <Grid xs={12} md={6}>
+            <Card sx={{ height: '100%' }}>
+              <CardContent>
+                <Typography variant="h6" sx={{ fontWeight: 800, mb: 2 }}>Digital Transformation</Typography>
+                <Typography color="text.secondary" sx={{ mb: 2 }}>
+                  Developing MCAN National Website/database from 0% to 95%, an avenue that will serve in keeping our past and present records, digitalising our administrative processions and membership registration and lively tracking all MCAN property across the country. This project is expected to be completed by November 2025(in a month time), in sha Allāh.
+                </Typography>
+                <Pill text="Website Development" color="primary" />
+                <Pill text="Database System" />
+                <Pill text="Digital Records" />
+              </CardContent>
+            </Card>
+          </Grid>
+          <Grid xs={12} md={6}>
+            <Card sx={{ height: '100%' }}>
+              <CardContent>
+                <Typography variant="h6" sx={{ fontWeight: 800, mb: 2 }}>Spiritual Activities</Typography>
+                <Typography color="text.secondary" sx={{ mb: 2 }}>
+                  Successful conduction of almost 40 congregational (Jumu'ah) prayers led by the National Ameer and sometimes National Da'wah Chairman from 20th March till date.
+                </Typography>
+                <Pill text="Jumu'ah Prayers" color="primary" />
+                <Pill text="Spiritual Leadership" />
+                <Pill text="Community Building" />
+              </CardContent>
+            </Card>
+          </Grid>
+          <Grid xs={12} md={6}>
+            <Card sx={{ height: '100%' }}>
+              <CardContent>
+                <Typography variant="h6" sx={{ fontWeight: 800, mb: 2 }}>Infrastructure Development</Typography>
+                <Typography color="text.secondary" sx={{ mb: 2 }}>
+                  Construction of six tiled public restrooms and renovation of various facilities across the federation.
+                </Typography>
+                <Pill text="Public Restrooms" color="primary" />
+                <Pill text="Facility Renovation" />
+                <Pill text="Infrastructure" />
+              </CardContent>
+            </Card>
+          </Grid>
+          <Grid xs={12} md={6}>
+            <Card sx={{ height: '100%' }}>
+              <CardContent>
+                <Typography variant="h6" sx={{ fontWeight: 800, mb: 2 }}>Leadership Development</Typography>
+                <Typography color="text.secondary" sx={{ mb: 2 }}>
+                  Successful organisation of the General Executive Council (GEC) Meeting and Annual National Leadership Training Workshop from 25th-29th of September in IET Headquarters, Minna, Niger State.
+                </Typography>
+                <Pill text="GEC Meeting" color="primary" />
+                <Pill text="Leadership Training" />
+                <Pill text="Capacity Building" />
+              </CardContent>
+            </Card>
+          </Grid>
+        </Grid>
+      </Container>
+
+      <Divider />
+
+      {/* Organizational Structure */}
+      <Container maxWidth="lg" sx={{ py: { xs: 6, md: 8 } }}>
+        <SectionHeading title="Organizational Structure" subtitle="Our administrative hierarchy" />
         <Grid container spacing={3}>
           <Grid xs={12} md={6}>
             <Card>
               <CardContent>
-                <Typography variant="h6" sx={{ fontWeight: 800, mb: 2 }}>Coordination & Support</Typography>
-                <Typography component="ol" sx={{ pl: 3 }}>
-                  <li>Serve as a coordinating body and forum for exchange of ideas among Muslim corps members nationwide.</li>
-                  <li>Protect the legitimate rights and interests of Muslim corps members across Nigeria.</li>
+                <Typography variant="h6" sx={{ fontWeight: 800, mb: 2 }}>National Executive Council (NEC)</Typography>
+                <Typography component="ul" sx={{ pl: 3 }}>
+                  <li>National Ameer (President)</li>
+                  <li>National Secretary General (NSG)</li>
+                  <li>National Ameerah</li>
+                  <li>National Da'wah Chairman</li>
+                  <li>National Business Chairman and Assets Maintenance Officer (AMO)</li>
+                  <li>National Public Relation Officer (PRO)</li>
+                  <li>National Assistance Secretary General (ASG)</li>
+                  <li>National Financial Secretary (FIN. SEC.)</li>
+                  <li>National Treasurer</li>
+                  <li>National Auditor</li>
                 </Typography>
               </CardContent>
             </Card>
@@ -122,10 +267,35 @@ const AboutPage: React.FC = () => {
           <Grid xs={12} md={6}>
             <Card>
               <CardContent>
-                <Typography variant="h6" sx={{ fontWeight: 800, mb: 2 }}>Islamic Development</Typography>
-                <Typography component="ol" sx={{ pl: 3 }}>
-                  <li>Promote the correct understanding of Islam among corps members, students and the broader public.</li>
-                  <li>Coordinate efforts with Islamic organizations in propagating Islam across Nigeria and beyond.</li>
+                <Typography variant="h6" sx={{ fontWeight: 800, mb: 2 }}>Zonal Executive Council (ZEC)</Typography>
+                <Typography component="ul" sx={{ pl: 3 }}>
+                  <li>Zonal Ameer/Coordinator (automatic vice to the National Ameer/President)</li>
+                  <li>Zonal Secretary General (ZSG)</li>
+                  <li>Zonal Assistance Secretary General (ZASG)</li>
+                  <li>Zonal Da'wah Chairman</li>
+                  <li>Zonal Project Chairman</li>
+                  <li>Zonal Treasurer</li>
+                  <li>Zonal Financial Secretary</li>
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+          <Grid xs={12} md={6}>
+            <Card>
+              <CardContent>
+                <Typography variant="h6" sx={{ fontWeight: 800, mb: 2 }}>State Executive Council (SEC)</Typography>
+                <Typography color="text.secondary">
+                  Responsible for coordinating state's Muslim Corpers' Affairs and managing liaison offices across their respective LGAs. All the 36 states and the FCT have a well functional executive council, working hand-in-hand with the National body, showing the peak of loyalty.
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+          <Grid xs={12} md={6}>
+            <Card>
+              <CardContent>
+                <Typography variant="h6" sx={{ fontWeight: 800, mb: 2 }}>Muslim Corpers Liaison Officer (MCLO)</Typography>
+                <Typography color="text.secondary">
+                  Responsible for managing MCAN members and property in their respective LGAs in every local government of the federation. Currently MCAN has over 600 LGAs with liaison offices and functional executive council.
                 </Typography>
               </CardContent>
             </Card>
@@ -144,10 +314,10 @@ const AboutPage: React.FC = () => {
               <CardContent>
                 <Typography variant="h6" sx={{ fontWeight: 800, mb: 1 }}>Pre-Orientation</Typography>
                 <Typography color="text.secondary" sx={{ mb: 2 }}>
-                  In collaboration with MSSN across higher institutions; seminars and sensitization 2–3 months before camp.
+                  The programme is aimed at raising the consciousness of Potential Corps Members (PCMs) in higher institutions within the country. Here, MCAN liaises with Muslim Students' Society of Nigeria (MSSN) by jointly organising seminars to familiarise PCMs with the aims and objectives of MCAN and NYSC.
                 </Typography>
                 <Pill text="Seminars" color="primary" />
-                <Pill text="Pamphlets" />
+                <Pill text="Virtual Engagements" />
                 <Pill text="Campus Outreach" />
               </CardContent>
             </Card>
@@ -157,11 +327,11 @@ const AboutPage: React.FC = () => {
               <CardContent>
                 <Typography variant="h6" sx={{ fontWeight: 800, mb: 1 }}>Orientation Camp</Typography>
                 <Typography color="text.secondary" sx={{ mb: 2 }}>
-                  Lectures, Da'wah, Qur'an memorization, humanitarian projects, and interfaith outreach.
+                  The programme commences as the orientation camp opens for each stream across the country. Here, MCAN members identify and mobilise Muslim corps members to provide an atmosphere for the pursuit of Islamic personal development and closer interaction between Muslim corps members of different backgrounds.
                 </Typography>
-                <Pill text="Da'wah" color="primary" />
-                <Pill text="Memorization" />
-                <Pill text="Projects" />
+                <Pill text="Da'wah Programmes" color="primary" />
+                <Pill text="Qur'an Recitation" />
+                <Pill text="Humanitarian Works" />
               </CardContent>
             </Card>
           </Grid>
@@ -170,11 +340,11 @@ const AboutPage: React.FC = () => {
               <CardContent>
                 <Typography variant="h6" sx={{ fontWeight: 800, mb: 1 }}>Post-Orientation</Typography>
                 <Typography color="text.secondary" sx={{ mb: 2 }}>
-                  Al-Usrah, Arabic/Qur'an classes, village Da'wah, media programs, leadership seminars, tutorials and more.
+                  The post-orientation activities run from when corps members leave orientation camps to few days after their passing-out parade (POP). These activities are generally divided into three categories: Da'wah programmes, visitation programmes and community development programmes.
                 </Typography>
-                <Pill text="Al-Usrah" color="primary" />
-                <Pill text="Arabic/Qur'an" />
-                <Pill text="Media Programs" />
+                <Pill text="Weekly Programmes" color="primary" />
+                <Pill text="Visitation Programmes" />
+                <Pill text="Community Development" />
               </CardContent>
             </Card>
           </Grid>
@@ -183,31 +353,27 @@ const AboutPage: React.FC = () => {
 
       <Divider />
 
-      {/* Core Values */}
+      {/* Annual Programs */}
       <Container maxWidth="lg" sx={{ py: { xs: 6, md: 8 } }}>
-        <SectionHeading title="Our Core Values" subtitle="What guides our conduct and service" />
+        <SectionHeading title="Annual Programs" subtitle="Major events and activities" />
         <Grid container spacing={3}>
-          <Grid xs={12} md={4}>
+          <Grid xs={12} md={6}>
             <Card>
               <CardContent>
-                <Typography variant="h5" sx={{ fontWeight: 800, mb: 1 }}>Compassion</Typography>
-                <Typography color="text.secondary">Empathy and care for all members on their spiritual and professional journey.</Typography>
+                <Typography variant="h6" sx={{ fontWeight: 800, mb: 2 }}>General Executive Council (GEC) Meeting</Typography>
+                <Typography color="text.secondary">
+                  Where all the national, zonal and state executives come to give details of their achievements and challenges at each level and look into the progress, share ideas on how to make MCAN great nationwide and physically interact and address pressing universal issues.
+                </Typography>
               </CardContent>
             </Card>
           </Grid>
-          <Grid xs={12} md={4}>
+          <Grid xs={12} md={6}>
             <Card>
               <CardContent>
-                <Typography variant="h5" sx={{ fontWeight: 800, mb: 1 }}>Knowledge</Typography>
-                <Typography color="text.secondary">Continuous learning of Islamic principles alongside modern knowledge.</Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-          <Grid xs={12} md={4}>
-            <Card>
-              <CardContent>
-                <Typography variant="h5" sx={{ fontWeight: 800, mb: 1 }}>Service</Typography>
-                <Typography color="text.secondary">Commitment to impactful service and positive societal contribution.</Typography>
+                <Typography variant="h6" sx={{ fontWeight: 800, mb: 2 }}>National Convention</Typography>
+                <Typography color="text.secondary">
+                  Annual gathering of all MCAN members and stakeholders to review progress, set new goals, and strengthen the bonds of brotherhood and sisterhood across the nation.
+                </Typography>
               </CardContent>
             </Card>
           </Grid>
@@ -221,7 +387,7 @@ const AboutPage: React.FC = () => {
             <Grid xs={12} md={8}>
               <Typography variant="h4" sx={{ fontWeight: 900, mb: 1 }}>Join MCAN</Typography>
               <Typography variant="subtitle1" sx={{ opacity: 0.9 }}>
-                Be part of a nationwide network of Muslim corps members serving Islam and the Nation.
+                Be part of a nationwide network of Muslim corps members serving Islam and the Nation. With over 178,000 members annually across 37 states and FCT, MCAN is the largest Muslim organization in the NYSC scheme.
               </Typography>
             </Grid>
             <Grid xs={12} md={4}>

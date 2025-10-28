@@ -42,14 +42,14 @@ const HomePage: React.FC = () => {
 
   const stats = [
     { 
-      label: 'Active Members', 
-      value: '15,000+', 
+      label: 'Annual Members', 
+      value: '178,000+', 
       icon: <People sx={{ fontSize: 40 }} />, 
       gradient: 'linear-gradient(135deg, #4CAF50 0%, #81C784 100%)',
       description: 'Muslim Corps Members'
     },
     { 
-      label: 'State Chapters', 
+      label: 'States & FCT', 
       value: '37', 
       icon: <LocationOn sx={{ fontSize: 40 }} />, 
       gradient: 'linear-gradient(135deg, #2196F3 0%, #64B5F6 100%)',
@@ -57,17 +57,17 @@ const HomePage: React.FC = () => {
     },
     { 
       label: 'Years of Service', 
-      value: '45+', 
+      value: '47+', 
       icon: <TrendingUp sx={{ fontSize: 40 }} />, 
       gradient: 'linear-gradient(135deg, #FF9800 0%, #FFB74D 100%)',
       description: 'Dedicated Service'
     },
     { 
-      label: 'Properties Managed', 
-      value: '200+', 
+      label: 'MCAN Lodges', 
+      value: '47', 
       icon: <Business sx={{ fontSize: 40 }} />, 
       gradient: 'linear-gradient(135deg, #9C27B0 0%, #BA68C8 100%)',
-      description: 'Lodges, Buses & Masjids'
+      description: 'In 28 States'
     },
   ];
 
@@ -249,8 +249,8 @@ const HomePage: React.FC = () => {
                       px: { xs: 2, md: 0 },
                     }}
                   >
-                    Empowering Muslim Corps Members across Nigeria with digital solutions, 
-                    community support, and comprehensive services for a fulfilling NYSC experience.
+                    A religious body under the National Youth Service Corps (NYSC) Scheme established in 1978, 
+                    registered with CAC since 1994 and affiliated with NSCIA since 2018. Serving Islam through the Nation.
                   </Typography>
                   
                   <Stack 
@@ -385,7 +385,7 @@ const HomePage: React.FC = () => {
                   px: { xs: 2, md: 0 }
                 }}
               >
-                Empowering Muslim Corps Members across Nigeria with digital solutions and community support
+                Serving Islam through the Nation - Over 178,000 Muslim Corps Members annually across 37 states and FCT
               </Typography>
             </Box>
           </Fade>
@@ -488,7 +488,7 @@ const HomePage: React.FC = () => {
                   px: { xs: 2, md: 0 }
                 }}
               >
-                Experience the future of NYSC with our comprehensive digital platform designed specifically for Muslim Corps Members
+                Digital solutions and comprehensive services designed specifically for Muslim Corps Members across Nigeria
               </Typography>
             </Box>
           </Fade>
@@ -569,7 +569,7 @@ const HomePage: React.FC = () => {
                 Our Services
               </Typography>
               <Typography variant="h6" color="text.secondary" sx={{ maxWidth: 600, mx: 'auto' }}>
-                Comprehensive services designed to support Muslim Corps Members throughout their NYSC journey
+                Supporting Muslim Corps Members with accommodation, transportation, and spiritual services across Nigeria
               </Typography>
             </Box>
           </Fade>
@@ -651,8 +651,8 @@ const HomePage: React.FC = () => {
               </Typography>
               
               <Typography variant="h6" sx={{ mb: 4, opacity: 0.9, maxWidth: 600, mx: 'auto' }}>
-                Become part of Nigeria's largest Muslim Corps Members community and 
-                experience the future of NYSC with our digital platform.
+                Join Nigeria's largest Muslim Corps Members community with over 178,000 members annually 
+                across 37 states and FCT. Serving Islam through the Nation since 1978.
               </Typography>
               
               <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2} justifyContent="center">
