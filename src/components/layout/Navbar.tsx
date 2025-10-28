@@ -37,7 +37,7 @@ import mcanLogo from '../../assets/mcanlogo.jpg';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContext';
 import SearchBar from './SearchBar';
-import DarkModeToggle from './DarkModeToggle';
+// import DarkModeToggle from './DarkModeToggle'; // Removed dark mode functionality
 import NotificationBell from '../notifications/NotificationBell';
 
 const Navbar: React.FC = () => {
@@ -306,7 +306,7 @@ const Navbar: React.FC = () => {
 
           {/* User Menu */}
           <Box sx={{ display: 'flex', alignItems: 'center', gap: { xs: 0.5, sm: 2 }, flexShrink: 0 }}>
-            <DarkModeToggle />
+            {/* DarkModeToggle removed */}
             {isAuthenticated && <NotificationBell />}
             {isAuthenticated ? (
               <>

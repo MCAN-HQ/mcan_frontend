@@ -32,7 +32,7 @@ import ProtectedRoute from './src/components/auth/ProtectedRoute';
 
 // Contexts
 import { useAuth } from './src/contexts/AuthContext';
-import { CustomThemeProvider } from './src/contexts/ThemeContext';
+// import { CustomThemeProvider } from './src/contexts/ThemeContext'; // Removed dark mode functionality
 
 // PWA Components
 import InstallPrompt from './src/components/pwa/InstallPrompt';
@@ -123,9 +123,9 @@ const AppContent: React.FC = () => {
 
 const App: React.FC = () => {
   return (
-    <CustomThemeProvider>
+    // <CustomThemeProvider> // Removed dark mode functionality
       <AppContent />
-    </CustomThemeProvider>
+    // </CustomThemeProvider>
   );
 };
 
